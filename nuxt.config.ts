@@ -22,6 +22,6 @@ export default defineNuxtConfig({
     }
   },
 
-  plugins: ['~/plugins/gsap.js'],
+  plugins: ["~/plugins/gsap.client.js"],
   modules: ['@nuxt/image']
 })

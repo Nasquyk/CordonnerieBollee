@@ -128,19 +128,36 @@
   </div>
 </template>
 
-<script setup>
-import gsap from 'gsap'
-import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
-import ImageComparison from '@/components/ImageComparison.vue'
-import imageBefore from '@/assets/img/antique-keys.jpg'
-import imageAfter from '@/assets/img/img1.png'
-import { handleScroll } from '@/utils/scroll'
-import Footer from '@/components/Footer.vue' // Import Footer component
 
-gsap.registerPlugin(ScrollToPlugin)
+<script setup>
+import { onMounted } from "vue"; // Ajoute bien cet import
+import { useNuxtApp } from "#app";
+import { handleScroll } from "@/utils/scroll";
+import ImageComparison from "@/components/ImageComparison.vue";
+import imageBefore from "@/assets/img/antique-keys.jpg";
+import imageAfter from "@/assets/img/img1.png";
+import Footer from "@/components/Footer.vue";
+
+let gsap;
+
+onMounted(async () => {
+  const { $gsap } = useNuxtApp();
+  gsap = $gsap;
+
+  if (gsap) {
+    gsap.registerPlugin(gsap.ScrollToPlugin);
+  }
+});
 
 const scrollToSection = () => {
-  const target = document.getElementById('services')
-  gsap.to(window, { duration: 1, scrollTo: { y: target, offsetY: 70 }, onComplete: () => handleScroll(bgColorClass, textColorClass, { bgColor: 'bg-red-600' }) })
-}
+  const target = document.getElementById("services");
+  if (gsap) {
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: { y: target, offsetY: 70 },
+      onComplete: () => handleScroll("bgColorClass", "textColorClass", { bgColor: "bg-red-600" }),
+    });
+  }
+};
 </script>
+v
