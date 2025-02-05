@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center" >
+  <div class="flex flex-col items-center">
     <div
       class="relative w-[400px] h-64 overflow-hidden"
       @mousemove="onDrag"
@@ -9,15 +9,27 @@
       @touchend="stopDragging"
       @touchcancel="stopDragging"
     >
-      <!-- Image de fond -->
-      <img :src="imageBefore" alt="Image Before" class="absolute inset-0 w-full h-full object-cover" />
+      <!-- Image de fond optimisée -->
+      <NuxtImg
+        :src="imageBefore"
+        alt="Image Before"
+        class="absolute inset-0 w-full h-full object-cover"
+        format="webp"
+        quality="80"
+      />
 
-      <!-- Image à révéler -->
+      <!-- Image à révéler optimisée -->
       <div
         class="absolute inset-0 overflow-hidden"
         :style="{ width: sliderPosition + '%' }"
       >
-        <img :src="imageAfter" alt="Image After" class="absolute inset-0 w-full h-full object-cover" />
+        <NuxtImg
+          :src="imageAfter"
+          alt="Image After"
+          class="absolute inset-0 w-full h-full object-cover"
+          format="webp"
+          quality="80"
+        />
       </div>
 
       <!-- Barre draggable -->
@@ -58,7 +70,7 @@ export default {
   },
   data() {
     return {
-      sliderPosition: 50, // Position initiale du slider
+      sliderPosition: 50,
       isDragging: false,
     };
   },
@@ -78,15 +90,10 @@ export default {
       }
     },
   },
+  mounted() {
+  console.log("imageBefore:", this.imageBefore);
+  console.log("imageAfter:", this.imageAfter);
+}
+
 };
 </script>
-
-<style scoped>
-/* Amélioration du style du slider */
-div[draggable] {
-  transition: background-color 0.3s ease;
-}
-div[draggable]:hover {
-  background-color: #2563eb; /* Couleur au survol */
-}
-</style>

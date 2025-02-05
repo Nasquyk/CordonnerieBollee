@@ -46,7 +46,7 @@ const props = defineProps({
 
 const menuItems = [
   { name: 'Accueil', path: '/' },
-  { name: 'Prestation', path: '/prestation' },
+  { name: 'Prestations', path: '/prestation' },
   { name: 'Tarifs', path: '/tarifs' },
   { name: 'Réalisation', path: '/realisation' },
   { name: 'Contact', path: '/contact' }

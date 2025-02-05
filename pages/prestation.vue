@@ -44,7 +44,7 @@
             ref="buttonRef"
             class="bg-lightGreen text-white px-6 py-3 rounded-md hover:bg-darkGreen duration-300 opacity-0"
           >
-            Découvrez mes prealisations
+            Découvrez mes realisations
           </button>
         </NuxtLink>
       </div>

@@ -23,5 +23,10 @@ export default defineNuxtConfig({
   },
 
   plugins: ["~/plugins/gsap.client.js"],
-  modules: ['@nuxt/image']
+  modules: ['@nuxt/image'],
+  image: {
+    format: ['webp', 'avif'],
+    quality: 80,
+     dir: 'assets/img'
+  },
 })

@@ -36,11 +36,22 @@
           </div>
         </div>
       </div>
+      <ImageComparison
+          :imageBefore="imageBefore"
+          :imageAfter="imageAfter"
+        />
     </div>
+
+    <NuxtImg src="@/assets/img/img1.jpg" alt="Image Before" />
+
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
+import ImageComparison from '~/components/ImageComparison.vue';
+import imageBefore from "@/assets/img/antique-keys.jpg";
+import imageAfter from "@/assets/img/img1.png";
+
 // Importation directe des images
 const projets = [
   {
