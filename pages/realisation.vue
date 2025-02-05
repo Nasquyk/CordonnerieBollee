@@ -38,20 +38,18 @@
           </div>
         </div>
         <div class="flex justify-center">
-        
-        <ImageComparison 
-          :imageBefore="imageBefore"
-          :imageAfter="imageAfter"
-      />
+          <ImageComparison 
+            :imageBefore="imageBefore"
+            :imageAfter="imageAfter"
+          />
+        </div>
       </div>
-      </div>
-      
     </div>
   </div>
 </template>
 
 <script setup>
-
+import ImageComparison from '@/components/ImageComparison.vue';
 
 const imageBefore = "/img/chaussureblanche_sale.jpg";
 const imageAfter = "/img/chaussureblanche.png";

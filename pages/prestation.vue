@@ -21,15 +21,15 @@
               :alt="service.title" 
               class="w-full h-64 object-cover"
             >
-            <div class="absolute inset-0 bg-black h-64 bg-opacity-40 flex items-center justify-center">
+            <div class="absolute inset-0 bg-black h-64 bg-opacity-40 flex items-center justify-center w-full">
               <h3 class="text-white text-lg md:text-xl font-semibold">
                 {{ service.title }}
               </h3>
             </div>
           </div>
           <div class="p-6">
-            <HtmlContent :content="service.description" class="text-brown-700" />
-            <ul class="mt-4 space-y-2 text-brown-700">
+            <HtmlContent :content="service.description" class="text-gray-700 text-lg md:text-2xl" />
+            <ul class="mt-4 space-y-2 text-lg md:text-2xl">
               <li v-for="(item, idx) in service.features" :key="idx">
                 {{ item }}
               </li>
@@ -48,6 +48,14 @@
           </button>
         </NuxtLink>
       </div>
+
+    
+
+    
+
+
+
+      
     </div>
   </div>
 </template>
@@ -57,7 +65,13 @@ import { ref, onMounted } from 'vue'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import france from '../public/svg/Flag_of_France.svg'
+import italy from '../public/svg/Flag_of_Italy.svg'
 import HtmlContent from '../components/HtmlContent.vue'
+
+
+
+
+
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger)
@@ -72,12 +86,12 @@ const services = [
   {
     title: 'Réparation de chaussures',
     image: '/path/to/shoe-repair-image.jpg',
-    description: `Service rapide et professionnel de restauration de chaussure. Nous utilisons des produits de haute qualité pour garantir une restauration parfaite. Je travail avec des produits de qualité française <img src="${france}" class="w-6 h-6" alt="drapeau de la france"> et italienne pour garantir une restauration parfaite.`,
+    description: `Service rapide et professionnel de restauration de chaussure. Nous utilisons des produits de haute qualité pour garantir une restauration parfaite. Je travail avec des produits de qualité <span style="white-space: nowrap;">française <img src="${france}" class="w-8 h-6 rounded-sm inline" alt="drapeau de la france"> et italienne <img src="${italy}" class="w-8 h-8 inline" alt="drapeau de la france"></span>  pour garantir une restauration parfaite.`,
     features: [
-      'Ressemblage complet',
-      'Reparation du talon',
-      'Couture et recollage',
-      'Stretching et recollage'
+      '- Ressemblage complet',
+      '- Reparation du talon',
+      '- Couture et recollage',
+      '- Stretching et recollage'
     ]
   },
   {

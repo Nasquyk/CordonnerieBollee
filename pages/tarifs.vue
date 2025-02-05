@@ -5,10 +5,12 @@
       <div class="max-w-4xl mx-auto">
         <div class="text-center my-auto">
           <h1 class="text-4xl font-bold text-gray-900 mb-4 mt-8">Nos Tarifs</h1>
-          <p class="text-lg text-gray-600">Des solutions pour tous vos besoins en cordonnerie</p>
+          <p class="text-lg text-gray-600">“Des solutions pour tous vos besoins en cordonnerie, maroquinerie et reproduction de clés
+            <strong>Pas de services express</strong>
+          </p>
         </div>
         <!-- Ajout de la classe pour changer la couleur du texte de la navbar -->
-        <Navbar bgColor="bg-brown" defaultTextColor="text-white"/>
+       
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           <div v-for="category in services" :key="category.name" class="bg-white rounded-lg shadow-lg p-6">
             <div class="flex items-center gap-2 mb-6">

@@ -3,12 +3,11 @@
     <!-- eslint-disable -->
     <img
       slot="first"
-      src="/img/chaussureblanche_sale.jpg"
+      :src="imageBefore"
     />
     <img
       slot="second"
-      
-      src="/img/chaussureblanche.png"
+      :src="imageAfter"
     />
     <!-- eslint-enable -->
   </ImgComparisonSlider>
@@ -22,12 +21,23 @@ export default {
   components: {
     ImgComparisonSlider,
   },
+  props: {
+    imageBefore: {
+      type: String,
+      required: true,
+    },
+    imageAfter: {
+      type: String,
+      required: true,
+    },
+  },
 };
 </script>
 
 <style scoped>
+
 img {
   width: 100%;
-  height: 500px;
+  height: 800px;
 }
 </style>
