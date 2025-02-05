@@ -11,7 +11,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        brown: "#8B4513",
+        brown: "#815839",
         beige: "#F5EBE0",
         darkGreen: "#193B1B",
         lightGreen: "#4B692F",

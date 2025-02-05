@@ -29,7 +29,7 @@
           <div>
             <h2 class="text-3xl font-bold mb-4">Qui suis-je ?</h2>
             <p class="text-gray-700 text-lg md:text-2xl">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio modi obcaecati similique et. Illo molestias voluptatum, nam ducimus eius perspiciatis netus culpa non porro.
+              Attiré par le travail du cuir et de l’artisanat, je combine ces deux éléments dans le métier de cordonnier. M’étant formé auprès de l’AFPA et ayant exercé en tant que salarié, je suis maintenant l’heureux gérant de la cordonnerie Bollée.
             </p>
           </div>
           <div class="bg-gray-200 h-[250px] md:h-[350px] w-full md:w-[350px] mx-auto md:ml-48">
@@ -57,7 +57,7 @@
               class="w-full h-full object-cover"
             /> -->
             <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-              <h3 class="text-white text-lg md:text-xl font-semibold">Restauration de Chaussure</h3>
+              <h3 class="text-white text-lg md:text-xl font-semibold">Restauration de chaussures</h3>
             </div>
           </div>
         </NuxtLink>
@@ -68,7 +68,7 @@
               class="w-full h-full object-cover"
             /> -->
             <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-              <h3 class="text-white text-lg md:text-xl font-semibold">Vente de Produit d'entretien</h3>
+              <h3 class="text-white text-lg md:text-xl font-semibold">Vente de produits d'entretien</h3>
             </div>
           </div>
           <div class="relative overflow-hidden rounded-lg h-[300px] md:h-[500px]">
@@ -78,7 +78,7 @@
               class="w-full h-full object-cover"
             /> -->
             <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-              <h3 class="text-white text-lg md:text-xl font-semibold">Reproduction de Clés</h3>
+              <h3 class="text-white text-lg md:text-xl font-semibold">Reproduction de clés</h3>
             </div>
           </div>
         </div>
@@ -88,18 +88,18 @@
     <!-- Store Info Section -->
     <section class="py-16 bg-beige-50">
       <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold mb-8">La Boutique</h2>
+        <h2 class="text-3xl font-bold mb-8">La boutique</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
-            <h3 class="text-xl font-semibold mb-4">Info Pratique</h3>
+            <h3 class="text-xl font-semibold mb-4">Info pratiques</h3>
             <div class="space-y-3">
-              <p><strong>Téléphone:</strong> 06 08 63 83 32</p>
+              <p><strong>Téléphone :</strong> 06 08 63 83 32</p>
               <p>
-                <strong>Heure d'ouverture:</strong><br />
+                <strong>Horraires d'ouverture :</strong><br />
                 Du Mardi au Samedi 9h00 - 13h00, 14h00 - 18h00
               </p>
               <p>
-                <strong>Adresse:</strong><br />
+                <strong>Adresse :</strong><br />
                 59 Bis Av. Bolée, 72100 Le Mans
               </p>
             </div>

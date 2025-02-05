@@ -3,7 +3,7 @@
     <div class="container flex flex-col flex-wrap px-5 py-10 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap">
       <div class="flex-shrink-0 w-full md:w-64 mx-auto text-center md:mx-0 md:text-left">
 
-        <p class="mt-2 text-sm font-bold text-white">Mes reseaux</p>
+        <p class="mb-3 text-ms font-medium tracking-widest text-white uppercase title-font underline">Mes reseaux</p>
         <div class="mt-4 ">
           <span class="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-start">
             <a href="https://www.facebook.com/BQTCouverture" target="_blank" class="text-neutral-50 cursor-pointer duration-300 hover:text-neutral-300">
@@ -36,7 +36,7 @@
           <h2 class="mb-3 text-ms font-medium tracking-widest text-white uppercase title-font underline">Contact</h2>
           <nav class="mb-10 list-none">
             <li class="mt-3">
-              <router-link to="/contact"><a class="text-white cursor-pointer hover:text-neutral-300" @click.prevent="navigateAndScrollToTop('/contact')">Me Contacter</a></router-link>
+              <router-link to="/contact"><a class="text-white cursor-pointer hover:text-neutral-300" @click.prevent="navigateAndScrollToTop('/contact')">Me contacter</a></router-link>
             </li>
             <li class="mt-3">
               <a class="text-white cursor-pointer hover:text-neutral-300">06 08 63 83 32</a>
