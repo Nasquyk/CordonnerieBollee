@@ -28,7 +28,7 @@
             </div>
           </div>
           <div class="p-6">
-            <p class="text-brown-700">{{ service.description }}</p>
+            <HtmlContent :content="service.description" class="text-brown-700" />
             <ul class="mt-4 space-y-2 text-brown-700">
               <li v-for="(item, idx) in service.features" :key="idx">
                 {{ item }}
@@ -56,6 +56,8 @@
 import { ref, onMounted } from 'vue'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import france from '../public/svg/Flag_of_France.svg'
+import HtmlContent from '../components/HtmlContent.vue'
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger)
@@ -68,9 +70,9 @@ const buttonRef = ref(null)
 // Services data
 const services = [
   {
-    title: 'Restauration de chaussure',
+    title: 'Réparation de chaussures',
     image: '/path/to/shoe-repair-image.jpg',
-    description: 'Service rapide et professionnel de restauration de chaussure. Nous utilisons des produits de haute qualité pour garantir une restauration parfaite.',
+    description: `Service rapide et professionnel de restauration de chaussure. Nous utilisons des produits de haute qualité pour garantir une restauration parfaite. Je travail avec des produits de qualité française <img src="${france}" class="w-6 h-6" alt="drapeau de la france"> et italienne pour garantir une restauration parfaite.`,
     features: [
       'Ressemblage complet',
       'Reparation du talon',

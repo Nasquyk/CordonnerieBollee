@@ -57,7 +57,7 @@
               class="w-full h-full object-cover"
             /> -->
             <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-              <h3 class="text-white text-lg md:text-xl font-semibold">Restauration de chaussures</h3>
+              <h3 class="text-white text-lg md:text-xl font-semibold">Réparation de chaussures</h3>
             </div>
           </div>
         </NuxtLink>

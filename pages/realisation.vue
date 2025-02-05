@@ -15,6 +15,7 @@
               :alt="`Projet ${projet.id} avant`"
               class="w-full aspect-video object-cover rounded-lg"
               placeholder
+              @error="handleImageError"
             />
             <span class="absolute top-4 left-4 font-medium bg-white px-3 py-1 rounded-full">Avant</span>
           </div>
@@ -26,6 +27,7 @@
               :alt="`Projet ${projet.id} après`"
               class="w-full aspect-video object-cover rounded-lg"
               placeholder
+              @error="handleImageError"
             />
             <span class="absolute top-4 left-4 font-medium bg-white px-3 py-1 rounded-full">Après</span>
           </div>
@@ -35,25 +37,27 @@
             <p class="text-sm text-gray-600">{{ projet.info }}</p>
           </div>
         </div>
-      </div>
-      <ImageComparison
+        <div class="flex justify-center">
+        
+        <ImageComparison 
           :imageBefore="imageBefore"
           :imageAfter="imageAfter"
-        />
+      />
+      </div>
+      </div>
+      
     </div>
-
-    <NuxtImg src="@/assets/img/img1.jpg" alt="Image Before" />
-
   </div>
 </template>
 
 <script setup>
-import ImageComparison from '~/components/ImageComparison.vue';
-import imageBefore from "@/assets/img/antique-keys.jpg";
-import imageAfter from "@/assets/img/img1.png";
 
+
+const imageBefore = "/img/chaussureblanche_sale.jpg";
+const imageAfter = "/img/chaussureblanche.png";
 // Importation directe des images
 const projets = [
+
   {
     id: 1,
     avant: new URL('@/assets/img/antique-keys.jpg', import.meta.url).href,
@@ -73,6 +77,8 @@ const projets = [
     info: 'Information sur le projet 3'
   }
 ];
+
+
 </script>
 
 <style scoped>
