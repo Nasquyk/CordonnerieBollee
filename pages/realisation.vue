@@ -39,22 +39,24 @@
         </div>
 
         <div class="text-3xl font-bold text-brown-800 mb-8 text-center">
-          Mes autres réalisations
-        </div>
-        <div class="flex justify-center space-x-4">
-          <ImageComparison 
-            :imageBefore="imageBefore"
-            :imageAfter="imageAfter"
-          />
-          <ImageComparison 
-            :imageBefore="imageBefore2"
-            :imageAfter="imageAfter2"
-          />
-          <ImageComparison 
-            :imageBefore="imageBefore"
-            :imageAfter="imageAfter"
-          />
-        </div>
+  Mes autres réalisations
+</div>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+  <ImageComparison 
+    v-for="(images, index) in [
+      { before: imageBefore, after: imageAfter },
+      { before: imageBefore2, after: imageAfter2 },
+      { before: dior, after: dior2 }
+    ]" 
+    :key="index"
+    :imageBefore="images.before"
+    :imageAfter="images.after"
+    class="w-full h-auto min-h-[400px] object-cover mx-auto"
+  />
+</div>
+
+
       </div>
     </div>
   </div>
@@ -63,11 +65,15 @@
 <script setup>
 import ImageComparison from '@/components/ImageComparison.vue';
 
+
 const imageBefore = "/img/chaussureblanche_sale.jpg";
 const imageAfter = "/img/chaussureblanche.png";
 
-const imageBefore2 = "/img/projet 3 nike avant.jpg";
-const imageAfter2 = "/img/projet 3 après nike.jpg";
+const imageBefore2 = "/img/cuirA.jpg";
+const imageAfter2 = "/img/cuirAp.jpg";
+
+const dior = "/img/dior.jpg";
+const dior2 = "/img/dior _.jpg";
 // Importation directe des images
 const projets = [
 
@@ -88,7 +94,15 @@ const projets = [
     avant: new URL('@/assets/img/projet 3 avant.jpg', import.meta.url).href,
     apres: new URL('@/assets/img/projet 3 après.jpg', import.meta.url).href,
     info: 'Information sur le projet 3'
-  }
+  },
+  {
+    id: 4,
+    avant: new URL('@/assets/img/montanteCuireAvant.jpg', import.meta.url).href,
+    apres: new URL('@/assets/img/montantecuireApres.jpg', import.meta.url).href,
+    info: 'Information sur le projet 3'
+  },
+  
+
 ];
 
 
