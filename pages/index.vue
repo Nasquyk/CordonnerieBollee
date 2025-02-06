@@ -112,19 +112,7 @@
       </div>
     </section>
 
-   <!-- Image Comparison Section -->
-    <!--
-    <section>
-      <div class="container mx-auto px-4 py-8">
-       
-        <ImageComparison
-          :imageBefore="imageBefore"
-          :imageAfter="imageAfter"
-        />
-      </div>
-    </section>
-    -->
-
+   
   </div>
 </template>
 
@@ -134,8 +122,8 @@ import { onMounted } from "vue"; // Ajoute bien cet import
 import { useNuxtApp } from "#app";
 import { handleScroll } from "@/utils/scroll";
 import ImageComparison from "@/components/ImageComparison.vue";
-import imageBefore from "@/assets/img/antique-keys.jpg";
-import imageAfter from "@/assets/img/img1.png";
+
+
 import Footer from "@/components/Footer.vue";
 
 let gsap;

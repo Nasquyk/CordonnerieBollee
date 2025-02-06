@@ -85,7 +85,7 @@ const buttonRef = ref(null)
 const services = [
   {
     title: 'Réparation de chaussures',
-    image: '/path/to/shoe-repair-image.jpg',
+    image: '@/assets/img/20230429_120311.jpg', // Corrected path
     description: `Service rapide et professionnel de restauration de chaussure. Nous utilisons des produits de haute qualité pour garantir une restauration parfaite. Je travail avec des produits de qualité <span style="white-space: nowrap;">française <img src="${france}" class="w-8 h-6 rounded-sm inline" alt="drapeau de la france"> et italienne <img src="${italy}" class="w-8 h-8 inline" alt="drapeau de la france"></span>  pour garantir une restauration parfaite.`,
     features: [
       '- Ressemblage complet',
@@ -96,7 +96,7 @@ const services = [
   },
   {
     title: 'Reproduction de clés',
-    image: '/path/to/key-reproduction-image.jpg',
+    image: '@/assets/img/key-reproduction-image.jpg', // Corrected path
     description: 'Service rapide et précis de reproduction de clés. Nous utilisons des équipements modernes pour garantir des duplicatas parfaits.',
     features: [
       'Clés de maison',
@@ -107,7 +107,7 @@ const services = [
   },
   {
     title: 'Nettoyage et entretien',
-    image: '/path/to/cleaning-service-image.jpg',
+    image: '@/assets/img/cleaning-service-image.jpg', // Corrected path
     description: 'Service complet de nettoyage et d\'entretien pour vos chaussures et accessoires.',
     features: [
       'Nettoyage profond',

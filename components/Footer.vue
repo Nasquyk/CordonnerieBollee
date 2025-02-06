@@ -47,7 +47,7 @@
     </div>
     <div>
       <div class="justify-center text-center">
-        <p>&copy; 2024 <a href="https://portfolio-gold-five-56.vercel.app/" target="_blank">Victorien.corbel</a>. Tous droits réservés.</p>
+        <p>&copy; 2025 <a href="https://portfolio-gold-five-56.vercel.app/" target="_blank">Victorien.corbel</a>. Tous droits réservés.</p>
 
       </div>
     </div>
