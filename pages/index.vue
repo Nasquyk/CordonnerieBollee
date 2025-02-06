@@ -134,8 +134,7 @@ import { onMounted } from "vue"; // Ajoute bien cet import
 import { useNuxtApp } from "#app";
 import { handleScroll } from "@/utils/scroll";
 import ImageComparison from "@/components/ImageComparison.vue";
-import imageBefore from "@/assets/img/antique-keys.jpg";
-import imageAfter from "@/assets/img/img1.png";
+
 import Footer from "@/components/Footer.vue";
 
 let gsap;
