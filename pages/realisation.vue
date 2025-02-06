@@ -13,7 +13,7 @@
             <nuxt-img
               :src="projet.avant"
               :alt="`Projet ${projet.id} avant`"
-              class="w-full aspect-video object-cover rounded-lg"
+              class="w-full aspect-video object-cover h-[600px] rounded-lg"
               placeholder
               @error="handleImageError"
             />
@@ -25,7 +25,7 @@
             <nuxt-img
               :src="projet.apres"
               :alt="`Projet ${projet.id} après`"
-              class="w-full aspect-video object-cover rounded-lg"
+              class="w-full aspect-video object-cover h-[600px] rounded-lg"
               placeholder
               @error="handleImageError"
             />
@@ -37,7 +37,19 @@
             <p class="text-sm text-gray-600">{{ projet.info }}</p>
           </div>
         </div>
-        <div class="flex justify-center">
+
+        <div class="text-3xl font-bold text-brown-800 mb-8 text-center">
+          Mes autres réalisations
+        </div>
+        <div class="flex justify-center space-x-4">
+          <ImageComparison 
+            :imageBefore="imageBefore"
+            :imageAfter="imageAfter"
+          />
+          <ImageComparison 
+            :imageBefore="imageBefore2"
+            :imageAfter="imageAfter2"
+          />
           <ImageComparison 
             :imageBefore="imageBefore"
             :imageAfter="imageAfter"
@@ -53,25 +65,28 @@ import ImageComparison from '@/components/ImageComparison.vue';
 
 const imageBefore = "/img/chaussureblanche_sale.jpg";
 const imageAfter = "/img/chaussureblanche.png";
+
+const imageBefore2 = "/img/projet 3 nike avant.jpg";
+const imageAfter2 = "/img/projet 3 après nike.jpg";
 // Importation directe des images
 const projets = [
 
   {
     id: 1,
-    avant: new URL('@/assets/img/antique-keys.jpg', import.meta.url).href,
-    apres: new URL('@/assets/img/img1.png', import.meta.url).href,
+    avant: new URL('@/assets/img/projet 1 avant.jpg', import.meta.url).href,
+    apres: new URL('@/assets/img/projet 1 après.jpg', import.meta.url).href,
     info: 'Information sur le projet 1'
   },
   {
     id: 2,
-    avant: new URL('@/assets/img/antique-keys.jpg', import.meta.url).href,
-    apres: new URL('@/assets/img/img1.png', import.meta.url).href,
+    avant: new URL('@/assets/img/projet 2 plan large.jpg', import.meta.url).href,
+    apres: new URL('@/assets/img/projet 2 zoom.jpg', import.meta.url).href,
     info: 'Information sur le projet 2'
   },
   {
     id: 3,
-    avant: new URL('@/assets/img/antique-keys.jpg', import.meta.url).href,
-    apres: new URL('@/assets/img/img1.png', import.meta.url).href,
+    avant: new URL('@/assets/img/projet 3 avant.jpg', import.meta.url).href,
+    apres: new URL('@/assets/img/projet 3 après.jpg', import.meta.url).href,
     info: 'Information sur le projet 3'
   }
 ];

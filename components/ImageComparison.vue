@@ -35,9 +35,8 @@ export default {
 </script>
 
 <style scoped>
-
 img {
   width: 100%;
-  height: 800px;
+  height: 50vh; /* Utilisation d'unités relatives pour la hauteur */
 }
 </style>
