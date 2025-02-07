@@ -4,8 +4,8 @@
     <section class="relative h-screen bg-black">
       <div class="absolute inset-0 z-10">
         <img 
-          src="@/assets/img/antique-keys.jpg" 
-          alt="Chaussures" 
+          src="@/assets/img/LeatherBlackShoes.jpg" 
+          alt="portrait" 
           class="w-full h-full object-cover opacity-50"
         />
         <div class="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -13,8 +13,9 @@
       <div class="relative container mx-auto px-4 h-full flex items-center z-20">
         <div class="text-beige text-center md:text-left">
           <h1 class="text-3xl md:text-5xl font-bold mb-6">
-            Bienvenue a la Cordonnerie Bolée
+            Bienvenue à la Cordonnerie Bollée !
           </h1>
+          
           <button @click="scrollToSection" class="bg-lightGreen text-white px-6 py-3 rounded-md hover:bg-darkGreen duration-300">
             Me découvrir
           </button>
@@ -27,14 +28,24 @@
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
-            <h2 class="text-3xl font-bold mb-4">Qui suis-je ?</h2>
+            
             <p class="text-gray-700 text-lg md:text-2xl">
-              Attiré par le travail du cuir et de l’artisanat, je combine ces deux éléments dans le métier de cordonnier. M’étant formé auprès de l’AFPA et ayant exercé en tant que salarié, je suis maintenant l’heureux gérant de la cordonnerie Bollée.
+              <h2 class="text-3xl font-bold mb-4">Bienvenue à la Cordonnerie Bollée, la cordonnerie du coin qui a vu le jour en 1926 !</h2>
+              C'est toujours un plaisir de vous recevoir dans cet atelier pour réparer et entretenir vos chaussures, escarpins, sneakers...<br>
+              Les coutures de sacs et autres accessoires en cuir sont aussi les bienvenus !<br>
+
+              Un service de reproduction de clé et de badge est aussi proposé<br>
+
+              Au plaisir de vous voir bientôt !
             </p>
           </div>
           <div class="bg-gray-200 h-[250px] md:h-[350px] w-full md:w-[350px] mx-auto md:ml-48">
             <!-- Add your photo here -->
-            
+            <img 
+          src="@/assets/img/portrait.jpg" 
+          alt="portrait" 
+          class="w-full h-full object-cover"
+        />
           </div>
         </div>
       </div>
@@ -49,38 +60,42 @@
 
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <NuxtLink to="tarifs">
-          <div class="relative overflow-hidden rounded-lg h-[300px] md:h-[500px]">
-            <!-- <img 
-              src="/service-1.jpg" 
-              alt="Restauration de Chaussure" 
-              class="w-full h-full object-cover"
-            /> -->
-            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-              <h3 class="text-white text-lg md:text-xl font-semibold">Réparation de chaussures</h3>
+          <NuxtLink to="/prestation#reparation-chaussures">
+            <div class="relative overflow-hidden rounded-lg h-[400px] md:h-[500px]"> <!-- Ajustement de la hauteur -->
+              <img 
+                src="/assets/img/tableAvecMachine.jpg" 
+                alt="Restauration de Chaussure" 
+                class="w-full h-full object-cover"
+              /> 
+              <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                <h3 class="text-white text-lg md:text-xl font-semibold">Réparation de chaussures</h3>
+              </div>
             </div>
-          </div>
-        </NuxtLink>
-          <div class="relative overflow-hidden rounded-lg h-[300px] md:h-[500px]">
-            <!-- <img 
-              src="/service-2.jpg" 
-              alt="Vente de Produit d'entretien" 
-              class="w-full h-full object-cover"
-            /> -->
-            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-              <h3 class="text-white text-lg md:text-xl font-semibold">Vente de produits d'entretien</h3>
+          </NuxtLink>
+          <NuxtLink to="/prestation#vente-produits">
+            <div class="relative overflow-hidden rounded-lg h-[400px] md:h-[500px]"> <!-- Ajustement de la hauteur -->
+              <img 
+                src="/assets/img/produit.jpg" 
+                alt="Vente de Produit d'entretien" 
+                class="w-full h-full object-cover"
+              /> 
+              <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                <h3 class="text-white text-lg md:text-xl font-semibold">Vente de produits d'entretien</h3>
+              </div>
             </div>
-          </div>
-          <div class="relative overflow-hidden rounded-lg h-[300px] md:h-[500px]">
-            <!-- <img 
-              src="/service-3.jpg" 
-              alt="Reproduction de Clés" 
-              class="w-full h-full object-cover"
-            /> -->
-            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-              <h3 class="text-white text-lg md:text-xl font-semibold">Reproduction de clés</h3>
+          </NuxtLink>
+          <NuxtLink to="/prestation#reproduction-cles">
+            <div class="relative overflow-hidden rounded-lg h-[400px] md:h-[500px]"> <!-- Ajustement de la hauteur -->
+              <img 
+                src="/assets/img/clefService.jpg" 
+                alt="Reproduction de Clés" 
+                class="w-full h-full object-cover"
+              /> 
+              <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                <h3 class="text-white text-lg md:text-xl font-semibold">Reproduction de clés</h3>
+              </div>
             </div>
-          </div>
+          </NuxtLink>
         </div>
       </div>
     </section>
@@ -96,11 +111,13 @@
               <p><strong>Téléphone :</strong> 06 08 63 83 32</p>
               <p>
                 <strong>Horraires d'ouverture :</strong><br />
-                Du Mardi au Samedi 9h00 - 13h00, 14h00 - 18h00
+                Du Mardi au Samedi 9h00 - 13h00 | 14h00 - 18h30<br>
+                Le Samedi : 9h00 - 12h30
+
               </p>
               <p>
                 <strong>Adresse :</strong><br />
-                59 Bis Av. Bolée, 72100 Le Mans
+                Adresse : 59 bis avenue Bollée, 72 000 Le Mans
               </p>
             </div>
           </div>
@@ -125,6 +142,7 @@ import ImageComparison from "@/components/ImageComparison.vue";
 
 
 import Footer from "@/components/Footer.vue";
+import { NuxtImg } from "#components";
 
 let gsap;
 

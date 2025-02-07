@@ -9,16 +9,22 @@
       </h2>
 
       <div class="grid grid-cols-1 gap-12">
+    
+        
+        
         <div 
           v-for="(service, index) in services" 
+          :id="service.id"
           :key="index" 
           ref="serviceRefs"
+        
           class="service-item opacity-0"
         >
           <div class="relative overflow-hidden rounded-lg">
             <img 
               :src="service.image" 
               :alt="service.title" 
+              
               class="w-full h-64 object-cover"
             >
             <div class="absolute inset-0 bg-black h-64 bg-opacity-40 flex items-center justify-center w-full">
@@ -37,6 +43,7 @@
           </div>
         </div>
       </div>
+      </div>
 
       <div class="text-center mt-8">
         <NuxtLink to="/realisation">
@@ -47,17 +54,9 @@
             Découvrez mes realisations
           </button>
         </NuxtLink>
-      </div>
-
-    
-
-    
-
-
-
-      
+      </div>  
     </div>
-  </div>
+  
 </template>
 
 <script setup>
@@ -67,6 +66,11 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import france from '../public/svg/Flag_of_France.svg'
 import italy from '../public/svg/Flag_of_Italy.svg'
 import HtmlContent from '../components/HtmlContent.vue'
+
+import tableAvecMachine from '@/assets/img/tableAvecMachine.jpg';
+
+import clef from '@/assets/img/clefService.jpg'
+import nettoyage from '@/assets/img/produit.jpg'
 
 
 
@@ -84,35 +88,43 @@ const buttonRef = ref(null)
 // Services data
 const services = [
   {
+    id: 'reparation-chaussures',
     title: 'Réparation de chaussures',
-    image: '@/assets/img/20230429_120311.jpg', // Corrected path
-    description: `Service rapide et professionnel de restauration de chaussure. Nous utilisons des produits de haute qualité pour garantir une restauration parfaite. Je travail avec des produits de qualité <span style="white-space: nowrap;">française <img src="${france}" class="w-8 h-6 rounded-sm inline" alt="drapeau de la france"> et italienne <img src="${italy}" class="w-8 h-8 inline" alt="drapeau de la france"></span>  pour garantir une restauration parfaite.`,
+    image: tableAvecMachine, // Corrected path
+    description: `Formé en cordonnerie traditionnelle, tout en cherchant à ajouter un touche de modernité à vos réparations, je vous propose à l’atelier : `,
     features: [
-      '- Ressemblage complet',
-      '- Reparation du talon',
-      '- Couture et recollage',
-      '- Stretching et recollage'
-    ]
+      '- Pose de patin',
+      '- Remplacement des talons',
+      '- Ressemelage complet',
+      '- Remplacement de la première de propreté',
+      '- Remplacement glissoire/antiglissoire ',
+      '- Recollage', 
+      '- Réparations sneakers',
+      '- Et plein d’autres ! N’hésitez pas à venir avec vos chaussures et vos questions.',
+      'Les réparations sont toutes réalisées avec un objectif commun : le respect de l’esthétique d’origine et l’utilisation de matériaux de qualité'
+      
+    ],
+    
   },
   {
+    id: 'reproduction-cles',
     title: 'Reproduction de clés',
-    image: '@/assets/img/key-reproduction-image.jpg', // Corrected path
-    description: 'Service rapide et précis de reproduction de clés. Nous utilisons des équipements modernes pour garantir des duplicatas parfaits.',
+    image: clef, // Corrected path
+    description: 'Service rapide et précis de reproduction de clés. Nous utilisons des équipements modernes pour garantir des duplicatas parfaits. <br> La grande majorité des clés sont effectuées à la minute',
     features: [
-      'Clés de maison',
-      'Clés de voiture',
-      'Clés à points',
-      'Télécommandes'
+      '- Clés de maison',
+      '- Clés à points',
     ]
   },
   {
+    id: 'vente-produits',
     title: 'Nettoyage et entretien',
-    image: '@/assets/img/cleaning-service-image.jpg', // Corrected path
-    description: 'Service complet de nettoyage et d\'entretien pour vos chaussures et accessoires.',
+    image: nettoyage, // Corrected path
+    description: 'Vos baskets ont connu des jours meilleurs ? Pas besoin de les abandonner ! Rayures, taches, usure : un bon coup de propre et un peu de savoir-faire suffisent à leur donner meilleure mine. Qu’elles soient fatiguées, abîmées ou juste en manque de style, confiez-les à des mains expertes. Nettoyage, réparation : vos chaussures méritent une seconde chance. Offrez-leur un nouveau départ à l’atelier !',
     features: [
-      'Nettoyage profond',
-      'Traitement anti-taches',
-      'Restauration de couleur',
+      '- Entretien cuir lisse',
+      '- Entretien suede et nubuck',
+      '- Nettoyage sneakers ',
       'Protection et imperméabilisation'
     ]
   }
@@ -158,6 +170,18 @@ onMounted(() => {
       start: 'top 90%'
     }
   })
+
+  // Scroll to section if hash is present in URL
+  const hash = window.location.hash;
+  if (hash) {
+    const target = document.querySelector(hash);
+    if (target) {
+      gsap.to(window, {
+        duration: 1,
+        scrollTo: { y: target, offsetY: 70 }
+      });
+    }
+  }
 })
 </script>
 
