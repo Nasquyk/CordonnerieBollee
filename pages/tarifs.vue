@@ -82,8 +82,8 @@ const tarifs = ref({
     { name: "Semelle de propreté", price: "18€ (la paire)" }
   ],
   "Entretien": [
-    { name: "Entretien du cuir", price: "à partir de 20€" },
-    { name: "(nettoyage, crémage, imperméabilisation)", price: "" },
+    { name: "Entretien du cuir (nettoyage, crémage, imperméabilisation)", price: "à partir de 20€" },
+ 
     { name: "Nettoyage sneakers", price: "à partir de 29€" },
     { name: "Fers encastrés", price: "20€ (la paire)" },
     { name: "Complet sneakers", price: "49€ (la paire)" },
