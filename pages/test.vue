@@ -77,10 +77,7 @@
               </span>
             </div>
             <p class="text-gray-600 mb-4">{{ work.description }}</p>
-            <div class="flex justify-between items-center text-sm text-gray-500">
-              <span>{{ work.date }}</span>
-              <span>Délai: {{ work.duration }}</span>
-            </div>
+            
           </div>
         </div>
       </div>
@@ -94,26 +91,23 @@ export default {
   data() {
     return {
       selectedCategory: 'Tous',
-      categories: ['Tous', 'Restauration', 'Ressemelage', 'Teinture', 'Réparation'],
+      categories: ['Tous', 'Réparation de chaussures', 'Reproduction de clés', 'Nettoyage et entretien'],
       works: [
         {
-          title: 'Restauration Chaussures Cuir',
-          description: 'Rénovation complète avec teinture et réparation de la semelle sur des Oxford en cuir pleine fleur',
+          title: 'Text',
+          description: 'texte de description',
           beforeImage: '/img/dior.jpg',
           afterImage: '/img/dior _.jpg',
-          date: '15 Jan 2024',
-          duration: '3 jours',
-          category: 'Restauration',
+         
+          category: 'Réparation de chaussures',
           showBefore: false
         },
         {
           title: 'Restauration Chaussures Cuir',
           description: 'Rénovation complète avec teinture et réparation de la semelle sur des Oxford en cuir pleine fleur',
-          beforeImage: '/img/cuirAp.jpg',
-          afterImage: '/img/cuirA.jpg',
-          date: '15 Jan 2024',
-          duration: '3 jours',
-          category: 'Restauration',
+          beforeImage: '/img/projet 3 avant.jpg',
+          afterImage: '/img/projet 3 après.jpg',
+          category: 'Reproduction de clés',
           showBefore: false
         },
         // Ajoutez d'autres objets work ici si nécessaire
