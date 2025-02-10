@@ -40,8 +40,7 @@
         class="relative h-[600px] md:h-120 group cursor-pointer flex-grow"
         @mouseenter="work.showBefore = true"
         @mouseleave="work.showBefore = false"
-        @touchstart="work.showBefore = true"
-        @touchend="work.showBefore = false"
+        @click="toggleBeforeAfter(work)"
       >
         
         <img 
@@ -127,6 +126,11 @@ export default {
         return this.works
       }
       return this.works.filter(work => work.category === this.selectedCategory)
+    }
+  },
+  methods: {
+    toggleBeforeAfter(work) {
+      work.showBefore = !work.showBefore;
     }
   }
 }
