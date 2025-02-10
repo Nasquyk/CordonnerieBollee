@@ -1,125 +1,142 @@
+<!-- index.vue -->
 <template>
-  <div class="mx-auto p-4 md:p-6 text-center">
-    <h1 class="text-3xl font-bold text-center mb-6">Tarifs</h1>
-      
-      <p class="text-center text-gray-600 text-lg mb-8">
-        À l’atelier, chaque devis est réalisé avant la mise en œuvre des réparations. <br>
-        L’atelier est labellisé 
-        <span class="text-blue-500 cursor-pointer underline" @click="showModal = true">Bonus Réparation</span> 
-        et ce bonus est inclus dans la grille tarifaire.
+  <!-- Bannière -->
+  <div class="bg-gradient-to-r from-brown-700 to-brown-900 py-20">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-4">Nos Réalisations</h2>
+      <p class="text-xl">Découvrez notre savoir-faire à travers nos travaux de restauration</p>
+    </div>
+  </div>
+
+  <!-- Section Réalisations -->
+  <section id="realisations" class="py-16 ">
+    <div class="container mx-auto px-4">
+      <!-- Texte explicatif -->
+      <p class="text-center mb-8 text-gray-600">
+        <span class="hidden md:inline">Survolez les images pour voir l'avant/après.</span>
+        <span class="md:hidden">Touchez les images pour voir l'avant/après.</span>
       </p>
 
-    <div class="flex flex-col md:flex-row justify-center gap-4 w-full">
-      <!-- Carte Cordonnerie -->
-      <div class="md:w-1/2 flex justify-center">
-        <div class="bg-white p-4 rounded-lg shadow-md text-sm w-full md:w-[90%] lg:w-[80%] card-height flex flex-col">
-          <h2 class="text-lg font-semibold mb-3">Cordonnerie</h2>
-          <ul class="space-y-2 flex-grow">
-            <li v-for="service in tarifs.Cordonnerie" :key="service.name" class="flex justify-between py-2">
-              <span class="font-bold">{{ service.name }}</span>
-              <div class="text-right">
-                <span class="font-semibold">{{ service.price.split(' (')[0] }}</span>
-                <span v-if="service.price.includes('(la paire)')" class="block text-xs text-gray-500">la paire</span>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Autres cartes -->
-      <div class="md:w-1/2 flex flex-col gap-4">
-        <div 
-          v-for="(services, category) in otherServices" 
-          :key="category" 
-          class="bg-white p-4 rounded-lg shadow-md text-sm w-full card-height flex flex-col"
+      <!-- Filtres -->
+      <div class="flex flex-wrap gap-4 mb-12 justify-center">
+        <button 
+          v-for="category in categories" 
+          :key="category"
+          @click="selectedCategory = category"
+          class="px-6 py-2 rounded-full"
+          :class="selectedCategory === category ? 'bg-lightGreen text-white' : 'bg-darkGreen text-white hover:bg-gray-300'"
         >
-          <h2 class="text-lg font-semibold mb-3">{{ category }}</h2>
-          <ul class="space-y-2 flex-grow">
-            <li v-for="service in services" :key="service.name" class="flex justify-between py-2">
-              <span class="font-bold">{{ service.name }}</span>
-              <div class="text-right">
-                <span class="font-semibold">{{ service.price.split(' (')[0] }}</span>
-                <span v-if="service.price.includes('(la paire)')" class="block text-xs text-gray-500">la paire</span>
-              </div>
-            </li>
-          </ul>
+          {{ category }}
+        </button>
+      </div>
+
+      <!-- Grille de réalisations -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div 
+      v-for="(work, index) in filteredWorks" 
+      :key="index"
+      class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col"
+    >
+      <!-- Container des images avec effet avant/après -->
+      <div 
+        class="relative h-96 md:h-120 group cursor-pointer flex-grow"
+        @mouseenter="work.showBefore = true"
+        @mouseleave="work.showBefore = false"
+        @touchstart="work.showBefore = true"
+        @touchend="work.showBefore = false"
+      >
+        <!-- Image Après -->
+        <img 
+          :src="work.afterImage" 
+          :alt="work.title + ' après'"
+          class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300"
+          :class="{ 'opacity-0': work.showBefore, 'opacity-100': !work.showBefore }"
+        >
+        <!-- Image Avant -->
+        <img 
+          :src="work.beforeImage" 
+          :alt="work.title + ' avant'"
+          class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300"
+          :class="{ 'opacity-100': work.showBefore, 'opacity-0': !work.showBefore }"
+        >
+            
+            <!-- Indicateur Avant/Après -->
+            <div class="absolute bottom-4 right-4 bg-black bg-opacity-75 text-white px-4 py-2 rounded-full text-sm">
+              {{ work.showBefore ? 'Avant' : 'Après' }}
+            </div>
+
+            <!-- Overlay avec instruction -->
+            <div class="absolute top-4 left-4 bg-black bg-opacity-50 text-white px-4 py-2 rounded-full text-xs opacity-75">
+              <span class="hidden md:inline">{{ work.showBefore ? "Relâchez pour voir l'après" : "Survolez pour voir l'avant" }}</span>
+              <span class="md:hidden">{{ work.showBefore ? "Relâchez pour voir l'après" : "Touchez pour voir l'avant" }}</span>
+            </div>
+          </div>
+
+          <!-- Informations -->
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-4">
+              <h3 class="text-xl font-bold text-gray-900">{{ work.title }}</h3>
+              <span class="text-sm text-brown-600 bg-brown-100 px-3 py-1 rounded-full">
+                {{ work.category }}
+              </span>
+            </div>
+            <p class="text-gray-600 mb-4">{{ work.description }}</p>
+            <div class="flex justify-between items-center text-sm text-gray-500">
+              <span>{{ work.date }}</span>
+              <span>Délai: {{ work.duration }}</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-
-  <div v-if="showModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-    <div class="bg-white p-6 rounded-lg shadow-lg max-w-md">
-      <h2 class="text-xl font-semibold mb-4">Bonus Réparation</h2>
-      <p class="text-gray-700">Le Bonus Réparation est une aide financière permettant de réduire le coût de certaines réparations afin de favoriser la durabilité des objets.</p>
-      <img src="/assets/img/Bonus-Reparation.png" alt="Bonus Réparation" class="w-full mt-4">
-      <button @click="showModal = false" class="mt-4 py-2shadow bg-brown hover:bg-[#54361f] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Fermer</button>
-    </div>
-  </div>
+  </section>
 </template>
 
-<script setup>
-import { ref, onMounted } from 'vue';
-const showModal = ref(false);
-const tarifs = ref({
-  "Cordonnerie": [
-    { name: "Talon", price: "18€ (la paire)" },
-    { name: "Patin", price: "22€ (la paire)" },
-    { name: "Talon cranté", price: "20€ (la paire)" },
-    { name: "Patin cranté", price: "24€ (la paire)" },
-    { name: "Patin épais cuir", price: "47€ (la paire)" },
-    { name: "Patin épais caoutchouc", price: "29€ (la paire)" },
-    { name: "Talon aiguille", price: "17€ (la paire)" },
-    { name: "Redresse", price: "A partir de 10€ (la paire)" },
-    { name: "Collage", price: "A partir de 12€" },
-    { name: "Ressemelage caoutchouc", price: "A partir de 70€ (la paire)" },
-    { name: "Changement trépoint", price: "20€ (la paire)" },
-    { name: "Mise en forme", price: "9€ (la paire)" },
-    { name: "Fers haricots", price: "4€ (la paire)" },
-    { name: "Fers encastrés", price: "20€ (la paire)" },
-    { name: "Complet sneakers", price: "49€ (la paire)" },
-    { name: "Glissoirs / Antiglissoires", price: "28€ (la paire)" },
-    { name: "Semelle de propreté", price: "18€ (la paire)" }
-  ],
-  "Entretien": [
-    { name: "Entretien du cuir (nettoyage, crémage, imperméabilisation)", price: "à partir de 20€" },
-   
-    { name: "Nettoyage sneakers", price: "à partir de 29€" },
-    { name: "Fers encastrés", price: "20€ (la paire)" },
-    { name: "Complet sneakers", price: "49€ (la paire)" },
-    { name: "Glissoirs / Antiglissoires", price: "28€ (la paire)" }
-  ],
-  " Maroquinerie": [
-    { name: "Couture simple", price: "à partir de 12€" },
-    { name: "Pièce invisible ", price: "15€" }
-  ],
-  "Clés et badges minute": [
-    { name: "Clé plate", price: "7.5€" },
-    { name: "Clé plate couleur ", price: "8.5€" },
-    { name: "Clé à points", price: "29€" },
-    { name: "Clé brevetée", price: " sur devis" },
-    { name: "Badge", price: "à partir de 29€" }
-  ],
-});
-
-const otherServices = ref({});
-
-onMounted(() => {
-  const { Cordonnerie, ...others } = tarifs.value;
-  otherServices.value = others;
-});
+<script>
+export default {
+  name: 'RealisationsPage',
+  data() {
+    return {
+      selectedCategory: 'Tous',
+      categories: ['Tous', 'Restauration', 'Ressemelage', 'Teinture', 'Réparation'],
+      works: [
+        {
+          title: 'Restauration Chaussures Cuir',
+          description: 'Rénovation complète avec teinture et réparation de la semelle sur des Oxford en cuir pleine fleur',
+          beforeImage: '/img/dior.jpg',
+          afterImage: '/img/dior _.jpg',
+          date: '15 Jan 2024',
+          duration: '3 jours',
+          category: 'Restauration',
+          showBefore: false
+        },
+        // Ajoutez d'autres objets work ici si nécessaire
+      ]
+    }
+  },
+  computed: {
+    filteredWorks() {
+      if (this.selectedCategory === 'Tous') {
+        return this.works
+      }
+      return this.works.filter(work => work.category === this.selectedCategory)
+    }
+  }
+}
 </script>
 
 <style scoped>
-body {
-  background-color: #f5e7da;
+@media (hover: hover) and (pointer: fine) {
+  /* Styles pour les appareils avec hover */
+  .group:hover .group-hover\:opacity-100 {
+    opacity: 1;
+  }
 }
-.card-height {
-  height: auto;
-}
-@media (min-width: 768px) {
-  .card-height {
-    height: auto;
+
+@media (hover: none) and (pointer: coarse) {
+  /* Styles pour les appareils tactiles */
+  .group:active .group-hover\:opacity-100 {
+    opacity: 1;
   }
 }
 </style>
