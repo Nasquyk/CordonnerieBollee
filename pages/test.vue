@@ -1,6 +1,5 @@
-<!-- index.vue -->
 <template>
-  <!-- Bannière -->
+
   <div class="bg-gradient-to-r from-brown-700 to-brown-900 py-20">
     <div class="container mx-auto px-4 text-center">
       <h2 class="text-4xl font-bold mb-4">Nos Réalisations</h2>
@@ -8,16 +7,15 @@
     </div>
   </div>
 
-  <!-- Section Réalisations -->
+
   <section id="realisations" class="py-16 ">
     <div class="container mx-auto px-4">
-      <!-- Texte explicatif -->
+   
       <p class="text-center mb-8 text-gray-600">
         <span class="hidden md:inline">Survolez les images pour voir l'avant/après.</span>
         <span class="md:hidden">Touchez les images pour voir l'avant/après.</span>
       </p>
 
-      <!-- Filtres -->
       <div class="flex flex-wrap gap-4 mb-12 justify-center">
         <button 
           v-for="category in categories" 
@@ -30,49 +28,48 @@
         </button>
       </div>
 
-      <!-- Grille de réalisations -->
+      
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div 
       v-for="(work, index) in filteredWorks" 
       :key="index"
       class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col"
     >
-      <!-- Container des images avec effet avant/après -->
+      
       <div 
-        class="relative h-96 md:h-120 group cursor-pointer flex-grow"
+        class="relative h-[600px] md:h-120 group cursor-pointer flex-grow"
         @mouseenter="work.showBefore = true"
         @mouseleave="work.showBefore = false"
         @touchstart="work.showBefore = true"
         @touchend="work.showBefore = false"
       >
-        <!-- Image Après -->
-        <img 
-          :src="work.afterImage" 
-          :alt="work.title + ' après'"
-          class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300"
-          :class="{ 'opacity-0': work.showBefore, 'opacity-100': !work.showBefore }"
-        >
-        <!-- Image Avant -->
+        
         <img 
           :src="work.beforeImage" 
           :alt="work.title + ' avant'"
           class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300"
-          :class="{ 'opacity-100': work.showBefore, 'opacity-0': !work.showBefore }"
+          :class="{ 'opacity-100': !work.showBefore, 'opacity-0': work.showBefore }"
+        >
+   
+        <img 
+          :src="work.afterImage" 
+          :alt="work.title + ' après'"
+          class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300"
+          :class="{ 'opacity-0': !work.showBefore, 'opacity-100': work.showBefore }"
         >
             
-            <!-- Indicateur Avant/Après -->
+          
             <div class="absolute bottom-4 right-4 bg-black bg-opacity-75 text-white px-4 py-2 rounded-full text-sm">
-              {{ work.showBefore ? 'Avant' : 'Après' }}
+              {{ work.showBefore ? ' Après' : ' Avant' }}
             </div>
 
-            <!-- Overlay avec instruction -->
+          
             <div class="absolute top-4 left-4 bg-black bg-opacity-50 text-white px-4 py-2 rounded-full text-xs opacity-75">
-              <span class="hidden md:inline">{{ work.showBefore ? "Relâchez pour voir l'après" : "Survolez pour voir l'avant" }}</span>
-              <span class="md:hidden">{{ work.showBefore ? "Relâchez pour voir l'après" : "Touchez pour voir l'avant" }}</span>
+              <span class="hidden md:inline">{{ work.showBefore ? "Relâchez pour voir  l'avant" : "Survolez pour voir l'après" }}</span>
+              <span class="md:hidden">{{ work.showBefore ? "Relâchez pour voir  l'avant" : "Touchez pour voir l'après" }}</span>
             </div>
           </div>
 
-          <!-- Informations -->
           <div class="p-6">
             <div class="flex justify-between items-start mb-4">
               <h3 class="text-xl font-bold text-gray-900">{{ work.title }}</h3>
@@ -105,6 +102,16 @@ export default {
           description: 'Rénovation complète avec teinture et réparation de la semelle sur des Oxford en cuir pleine fleur',
           beforeImage: '/img/dior.jpg',
           afterImage: '/img/dior _.jpg',
+          date: '15 Jan 2024',
+          duration: '3 jours',
+          category: 'Restauration',
+          showBefore: false
+        },
+        {
+          title: 'Restauration Chaussures Cuir',
+          description: 'Rénovation complète avec teinture et réparation de la semelle sur des Oxford en cuir pleine fleur',
+          beforeImage: '/img/cuirAp.jpg',
+          afterImage: '/img/cuirA.jpg',
           date: '15 Jan 2024',
           duration: '3 jours',
           category: 'Restauration',
