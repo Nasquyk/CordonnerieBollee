@@ -44,7 +44,7 @@
             <img 
           src="@/assets/img/portrait.jpg" 
           alt="portrait" 
-          class="w-full h-full object-cover border-4 border-darkGreen rounded-lg"
+          class="w-full h-full object-cover border-4 border-darkGreen  rounded-xl"
         />
           </div>
         </div>
