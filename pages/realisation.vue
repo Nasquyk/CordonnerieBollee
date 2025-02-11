@@ -1,123 +1,146 @@
 <template>
-  <div class="min-h-screen bg-[#faf0e6] p-8">
-    <div class="max-w-7xl mx-auto px-4 md:px-8">
-      <h1 class="text-3xl font-bold text-brown-800 mb-8 text-center">Mes réalisations</h1>
-      
-      <!-- Sections de projets -->
-      <div class="space-y-16">
-        <div v-for="(projet, index) in projets" :key="projet.id" 
-             class="grid grid-cols-1 md:grid-cols-12 gap-4 items-center" 
-             :class="{ 'md:flex-row-reverse': index % 2 !== 0 }">
-          <!-- Image Avant -->
-          <div class="md:col-span-5 relative">
-            <nuxt-img
-              :src="projet.avant"
-              :alt="`Projet ${projet.id} avant`"
-              class="w-full aspect-video object-cover h-[600px] rounded-lg"
-              placeholder
-              @error="handleImageError"
-            />
-            <span class="absolute top-4 left-4 font-medium bg-white px-3 py-1 rounded-full">Avant</span>
-          </div>
 
-          <!-- Image Après -->
-          <div class="md:col-span-5 relative">
-            <nuxt-img
-              :src="projet.apres"
-              :alt="`Projet ${projet.id} après`"
-              class="w-full aspect-video object-cover h-[600px] rounded-lg"
-              placeholder
-              @error="handleImageError"
-            />
-            <span class="absolute top-4 left-4 font-medium bg-white px-3 py-1 rounded-full">Après</span>
-          </div>
-
-          <!-- Texte d'information -->
-          <div class="md:col-span-2 flex items-center text-center md:text-left">
-            <p class="text-sm text-gray-600">{{ projet.info }}</p>
-          </div>
-        </div>
-
-        <div class="text-3xl font-bold text-brown-800 mb-8 text-center">
-  Mes autres réalisations
-</div>
-
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-  <ImageComparison 
-    v-for="(images, index) in [
-      { before: imageBefore, after: imageAfter },
-      { before: imageBefore2, after: imageAfter2 },
-      { before: dior, after: dior2 }
-    ]" 
-    :key="index"
-    :imageBefore="images.before"
-    :imageAfter="images.after"
-    class="w-full h-auto min-h-[400px] object-cover mx-auto"
-  />
-</div>
-
-
-      </div>
+  <div class="bg-gradient-to-r from-brown-700 to-brown-900 py-20">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-4">Nos Réalisations</h2>
+      <p class="text-xl">Découvrez notre savoir-faire à travers nos travaux de restauration</p>
     </div>
   </div>
+
+
+  <section id="realisations" class="py-16 ">
+    <div class="container mx-auto px-4">
+   
+      <p class="text-center mb-8 text-gray-600">
+        <span class="hidden md:inline">Survolez les images pour voir l'avant/après.</span>
+        <span class="md:hidden">Touchez les images pour voir l'avant/après.</span>
+      </p>
+
+      <div class="flex flex-wrap gap-4 mb-12 justify-center">
+        <button 
+          v-for="category in categories" 
+          :key="category"
+          @click="selectedCategory = category"
+          class="px-6 py-2 rounded-full"
+          :class="selectedCategory === category ? 'bg-lightGreen text-white' : 'bg-darkGreen text-white hover:bg-gray-300'"
+        >
+          {{ category }}
+        </button>
+      </div>
+
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div 
+      v-for="(work, index) in filteredWorks" 
+      :key="index"
+      class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col"
+    >
+      
+      <div 
+        class="relative h-[600px] md:h-120 group cursor-pointer flex-grow"
+        @mouseenter="work.showBefore = true"
+        @mouseleave="work.showBefore = false"
+        @click="toggleBeforeAfter(work)"
+      >
+        
+        <img 
+          :src="work.beforeImage" 
+          :alt="work.title + ' avant'"
+          class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300"
+          :class="{ 'opacity-100': !work.showBefore, 'opacity-0': work.showBefore }"
+        >
+   
+        <img 
+          :src="work.afterImage" 
+          :alt="work.title + ' après'"
+          class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300"
+          :class="{ 'opacity-0': !work.showBefore, 'opacity-100': work.showBefore }"
+        >
+            
+          
+            <div class="absolute bottom-4 right-4 bg-black bg-opacity-75 text-white px-4 py-2 rounded-full text-sm">
+              {{ work.showBefore ? ' Après' : ' Avant' }}
+            </div>
+
+          
+            <div class="absolute top-4 left-4 bg-black bg-opacity-50 text-white px-4 py-2 rounded-full text-xs opacity-75">
+              <span class="hidden md:inline">{{ work.showBefore ? "Relâchez pour voir  l'avant" : "Survolez pour voir l'après" }}</span>
+              <span class="md:hidden">{{ work.showBefore ? "Relâchez pour voir  l'avant" : "Touchez pour voir l'après" }}</span>
+            </div>
+          </div>
+
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-4">
+              <h3 class="text-xl font-bold text-gray-900">{{ work.title }}</h3>
+              <span class="text-sm text-brown-600 bg-brown-100 px-3 py-1 rounded-full">
+                {{ work.category }}
+              </span>
+            </div>
+            <p class="text-gray-600 mb-4">{{ work.description }}</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
-<script setup>
-import ImageComparison from '@/components/ImageComparison.vue';
-
-
-const imageBefore = "/img/chaussureblanche_sale.jpg";
-const imageAfter = "/img/chaussureblanche.png";
-
-const imageBefore2 = "/img/cuirA.jpg";
-const imageAfter2 = "/img/cuirAp.jpg";
-
-const dior = "/img/dior.jpg";
-const dior2 = "/img/dior _.jpg";
-// Importation directe des images
-const projets = [
-
-  {
-    id: 1,
-    avant: new URL('@/assets/img/projet 1 avant.jpg', import.meta.url).href,
-    apres: new URL('@/assets/img/projet 1 après.jpg', import.meta.url).href,
-    info: 'Information sur le projet 1'
+<script>
+export default {
+  name: 'RealisationsPage',
+  data() {
+    return {
+      selectedCategory: 'Tous',
+      categories: ['Tous', 'Réparation de chaussures', 'Reproduction de clés', 'Nettoyage et entretien'],
+      works: [
+        {
+          title: 'Text',
+          description: 'texte de description',
+          beforeImage: '/img/dior.jpg',
+          afterImage: '/img/dior _.jpg',
+          category: 'Réparation de chaussures',
+          showBefore: false
+        },
+        {
+          title: 'Restauration Chaussures Cuir',
+          description: 'Rénovation complète avec teinture et réparation de la semelle sur des Oxford en cuir pleine fleur',
+          beforeImage: '/img/projet 3 avant.jpg',
+          afterImage: '/img/projet 3 après.jpg',
+          category: 'Reproduction de clés',
+          showBefore: false
+        },
+        // Ajoutez d'autres objets work ici si nécessaire
+      ]
+    }
   },
-  {
-    id: 2,
-    avant: new URL('@/assets/img/projet 2 plan large.jpg', import.meta.url).href,
-    apres: new URL('@/assets/img/projet 2 zoom.jpg', import.meta.url).href,
-    info: 'Information sur le projet 2'
+  computed: {
+    filteredWorks() {
+      if (this.selectedCategory === 'Tous') {
+        return this.works
+      }
+      return this.works.filter(work => work.category === this.selectedCategory)
+    }
   },
-  {
-    id: 3,
-    avant: new URL('@/assets/img/projet 3 avant.jpg', import.meta.url).href,
-    apres: new URL('@/assets/img/projet 3 après.jpg', import.meta.url).href,
-    info: 'Information sur le projet 3'
-  },
-  {
-    id: 4,
-    avant: new URL('@/assets/img/montanteCuireAvant.jpg', import.meta.url).href,
-    apres: new URL('@/assets/img/montantecuireApres.jpg', import.meta.url).href,
-    info: 'Information sur le projet 3'
-  },
-  
-
-];
-
-
+  methods: {
+    toggleBeforeAfter(work) {
+      work.showBefore = !work.showBefore;
+    }
+  }
+}
 </script>
 
 <style scoped>
-.nuxt-img:hover {
-  transform: scale(1.02);
-  transition: transform 0.3s ease;
+@media (hover: hover) and (pointer: fine) {
+  /* Styles pour les appareils avec hover */
+  .group:hover .group-hover\:opacity-100 {
+    opacity: 1;
+  }
 }
 
-@media (min-width: 768px) {
-  .md\:flex-row-reverse {
-    display: flex;
-    flex-direction: row-reverse;
+@media (hover: none) and (pointer: coarse) {
+  /* Styles pour les appareils tactiles */
+  .group:active .group-hover\:opacity-100 {
+    opacity: 1;
   }
 }
 </style>
