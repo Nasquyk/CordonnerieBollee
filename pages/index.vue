@@ -34,7 +34,7 @@
               C'est toujours un plaisir de vous recevoir dans cet atelier pour réparer et entretenir vos chaussures, escarpins, sneakers...<br>
               Les coutures de sacs et autres accessoires en cuir sont aussi les bienvenus !<br>
 
-              Un service de reproduction de clé et de badge est aussi proposé<br>
+              Un service de reproduction de clé et de badge est aussi proposé.<br>
 
               Au plaisir de vous voir bientôt !
             </p>
@@ -54,7 +54,7 @@
     <!-- Services Section -->
     <section class="py-16">
       <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12">Mes services</h2>
+        <h2 class="text-3xl font-bold text-center mb-12">Services</h2>
 
         
 
@@ -106,18 +106,18 @@
         <h2 class="text-3xl font-bold mb-8">La boutique</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
-            <h3 class="text-xl font-semibold mb-4">Info pratiques</h3>
+            <h3 class="text-xl font-semibold mb-4">Informations pratiques</h3>
             <div class="space-y-3">
               <p><strong>Téléphone :</strong> 06 08 63 83 32</p>
               <p>
-                <strong>Horraires d'ouverture :</strong><br />
-                Du Mardi au Samedi 9h00 - 13h00 | 14h00 - 18h30<br>
+                <strong>Horaires d'ouverture :</strong><br />
+                Du Mardi au Vendredi : 9h00 - 13h00 | 14h00 - 18h30<br>
                 Le Samedi : 9h00 - 12h30
 
               </p>
               <p>
                 <strong>Adresse :</strong><br />
-                Adresse : 59 bis avenue Bollée, 72 000 Le Mans
+                59 bis avenue Bollée, 72 000 Le Mans
               </p>
             </div>
           </div>

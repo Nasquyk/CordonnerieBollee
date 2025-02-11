@@ -6,7 +6,7 @@
         <p class="mb-3 text-ms font-medium tracking-widest text-white uppercase title-font underline">Mes reseaux</p>
         <div class="mt-4 ">
           <span class="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-start">
-            <a href="https://www.facebook.com/BQTCouverture" target="_blank" class="text-neutral-50 cursor-pointer duration-300 hover:text-neutral-300">
+            <a href="https://www.facebook.com" target="_blank" class="text-neutral-50 cursor-pointer duration-300 hover:text-neutral-300">
               <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 class="w-5 h-5" viewBox="0 0 24 24">
                 <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
@@ -17,7 +17,7 @@
       </div>
       <div class="flex flex-grow mt-10 -mb-10 text-center md:pl-20 md:mt-0 md:text-left">
         <div class="w-full px-4 lg:w-1/2 md:w-1/2">
-          <h2 class="mb-3 text-ms font-medium tracking-widest text-white uppercase title-font underline">Information
+          <h2 class="mb-3 text-ms font-medium tracking-widest text-white uppercase title-font underline">Informations 
           </h2>
           <nav class="mb-10 list-none">
             <li class="mt-3">
@@ -29,6 +29,9 @@
             <li class="mt-3">
               <router-link to="/realisation"><a class="text-white cursor-pointer hover:text-neutral-300" @click.prevent="navigateAndScrollToTop('/realisation')">Réalisations</a></router-link>
             </li>
+            <div>
+              CGV
+            </div>
             
           </nav>
         </div>

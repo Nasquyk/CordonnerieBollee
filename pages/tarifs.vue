@@ -87,7 +87,8 @@ const tarifs = ref({
     { name: "Nettoyage sneakers", price: "à partir de 29€" },
     { name: "Fers encastrés", price: "20€ (la paire)" },
     { name: "Complet sneakers", price: "49€ (la paire)" },
-    { name: "Glissoirs / Antiglissoires", price: "28€ (la paire)" }
+    { name: "Glissoirs / Antiglissoires", price: "28€ (la paire)" },
+  
   ],
   " Maroquinerie": [
     { name: "Couture simple", price: "à partir de 12€" },

@@ -98,7 +98,6 @@ export default {
           description: 'texte de description',
           beforeImage: '/img/dior.jpg',
           afterImage: '/img/dior _.jpg',
-         
           category: 'Réparation de chaussures',
           showBefore: false
         },

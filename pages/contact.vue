@@ -7,7 +7,7 @@
           <h1 class="text-3xl">Contactez moi !</h1>
           <p class="text-gray-300">Une question ? contactez moi !</p>
         </div>
-        <form>
+        <form action="https://formsubmit.co/your@email.com" method="POST">
           <input
             class="shadow mb-4 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             type="text"

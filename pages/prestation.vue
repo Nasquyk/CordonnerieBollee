@@ -91,16 +91,17 @@ const services = [
     id: 'reparation-chaussures',
     title: 'Réparation de chaussures',
     image: tableAvecMachine, // Corrected path
-    description: `Formé en cordonnerie traditionnelle, tout en cherchant à ajouter un touche de modernité à vos réparations, je vous propose à l’atelier : `,
+    description: `Formé en cordonnerie traditionnelle, tout en cherchant à ajouter une touche de modernité à vos réparations, je vous propose à l’atelier : `,
     features: [
-      '- Pose de patin',
+      '- Pose de patins',
       '- Remplacement des talons',
       '- Ressemelage complet',
       '- Remplacement de la première de propreté',
       '- Remplacement glissoire/antiglissoire ',
       '- Recollage', 
       '- Réparations sneakers',
-      '- Et plein d’autres ! N’hésitez pas à venir avec vos chaussures et vos questions.',
+      '- Et plein d’autres !',
+      ' N’hésitez pas à venir avec vos chaussures et vos questions.',
       'Les réparations sont toutes réalisées avec un objectif commun : le respect de l’esthétique d’origine et l’utilisation de matériaux de qualité'
       
     ],
@@ -110,10 +111,11 @@ const services = [
     id: 'reproduction-cles',
     title: 'Reproduction de clés',
     image: clef, // Corrected path
-    description: 'Service rapide et précis de reproduction de clés. Nous utilisons des équipements modernes pour garantir des duplicatas parfaits. <br> La grande majorité des clés sont effectuées à la minute',
+    description: 'Service rapide et précis de reproduction de clés. Nous utilisons des équipements modernes pour garantir des duplicatas parfaits.  La grande majorité des clés sont effectuées à la minute.',
     features: [
-      '- Clés de maison',
+      '- Clés plates',
       '- Clés à points',
+      '- Badges'
     ]
   },
   {
@@ -125,7 +127,7 @@ const services = [
       '- Entretien cuir lisse',
       '- Entretien suede et nubuck',
       '- Nettoyage sneakers ',
-      'Protection et imperméabilisation'
+      '- Protection et imperméabilisation'
     ]
   }
 ]
