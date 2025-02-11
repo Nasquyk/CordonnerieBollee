@@ -127,6 +127,7 @@ const services = [
       '- Entretien cuir lisse',
       '- Entretien suede et nubuck',
       '- Nettoyage sneakers ',
+      '- Dejaunissement des semelles',
       '- Protection et imperméabilisation'
     ]
   }
