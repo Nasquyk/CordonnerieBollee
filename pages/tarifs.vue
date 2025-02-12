@@ -85,9 +85,9 @@ const tarifs = ref({
     { name: "Entretien du cuir (nettoyage, crémage, imperméabilisation)", price: "à partir de 20€" },
  
     { name: "Nettoyage sneakers", price: "à partir de 29€" },
-    { name: "Fers encastrés", price: "20€ (la paire)" },
-    { name: "Complet sneakers", price: "49€ (la paire)" },
-    { name: "Glissoirs / Antiglissoires", price: "28€ (la paire)" },
+    { name: "Fers encastrés", price: "" },
+    { name: "Complet sneakers", price: "" },
+    { name: "Glissoirs / Antiglissoires", price: "" },
   
   ],
   " Maroquinerie": [

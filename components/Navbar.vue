@@ -12,7 +12,7 @@
       </button>
     </div>
     <div :class="['w-full block flex-grow lg:flex lg:items-center lg:w-auto', { 'hidden': !isMenuOpen && 'lg:hidden' }]">
-      <div class="text-lg lg:flex-grow flex justify-center space-x-3">
+      <div class="text-lg lg:flex-grow flex justify-center space-x-8">
         <NuxtLink 
           v-for="item in menuItems" 
           :key="item.path"
@@ -48,7 +48,7 @@ const menuItems = [
   { name: 'Accueil', path: '/' },
   { name: 'Prestations', path: '/prestation' },
   { name: 'Tarifs', path: '/tarifs' },
-  { name: 'Réalisation', path: '/realisation' },
+  { name: 'Réalisations', path: '/realisation' },
   { name: 'Contact', path: '/contact' }
 ]
 

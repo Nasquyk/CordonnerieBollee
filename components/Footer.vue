@@ -29,9 +29,9 @@
             <li class="mt-3">
               <router-link to="/realisation"><a class="text-white cursor-pointer hover:text-neutral-300" @click.prevent="navigateAndScrollToTop('/realisation')">Réalisations</a></router-link>
             </li>
-            <div>
-              CGV
-            </div>
+            <li class="mt-3">
+              <router-link to="/cgv"><a class="text-white cursor-pointer hover:text-neutral-300" @click.prevent="navigateAndScrollToTop('/cgv')">CGV</a></router-link>
+            </li>
             
           </nav>
         </div>

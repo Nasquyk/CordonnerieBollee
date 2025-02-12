@@ -32,7 +32,7 @@
             <p class="text-gray-700 text-lg md:text-2xl">
               <h2 class="text-3xl font-bold mb-4">Bienvenue à la Cordonnerie Bollée, la cordonnerie du coin qui a vu le jour en 1926 !</h2>
               C'est toujours un plaisir de vous recevoir dans cet atelier pour réparer et entretenir vos chaussures, escarpins, sneakers...<br>
-              Les coutures de sacs et autres accessoires en cuir sont aussi les bienvenus !<br>
+              Les coutures de sacs et autres accessoires en cuir sont également les bienvenus !<br>
 
               Un service de reproduction de clé et de badge est aussi proposé.<br>
 
@@ -44,7 +44,7 @@
             <img 
           src="@/assets/img/portrait.jpg" 
           alt="portrait" 
-          class="w-full h-full object-cover border-4 border-darkGreen  rounded-xl"
+          class="w-full h-full object-cover border-4 border-darkGreen  rounded-lg"
         />
           </div>
         </div>
@@ -72,18 +72,6 @@
               </div>
             </div>
           </NuxtLink>
-          <NuxtLink to="/prestation#vente-produits">
-            <div class="relative overflow-hidden rounded-lg h-[400px] md:h-[500px]"> <!-- Ajustement de la hauteur -->
-              <img 
-                src="/assets/img/produit.jpg" 
-                alt="Vente de Produit d'entretien" 
-                class="w-full h-full object-cover"
-              /> 
-              <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-                <h3 class="text-white text-lg md:text-xl font-semibold">Vente de produits d'entretien</h3>
-              </div>
-            </div>
-          </NuxtLink>
           <NuxtLink to="/prestation#reproduction-cles">
             <div class="relative overflow-hidden rounded-lg h-[400px] md:h-[500px]"> <!-- Ajustement de la hauteur -->
               <img 
@@ -96,6 +84,19 @@
               </div>
             </div>
           </NuxtLink>
+          <NuxtLink to="/prestation#vente-produits">
+            <div class="relative overflow-hidden rounded-lg h-[400px] md:h-[500px]"> <!-- Ajustement de la hauteur -->
+              <img 
+                src="/assets/img/produit.jpg" 
+                alt="Vente de Produit d'entretien" 
+                class="w-full h-full object-cover"
+              /> 
+              <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                <h3 class="text-white text-lg md:text-xl font-semibold">Nettoyage et entretien</h3>
+              </div>
+            </div>
+          </NuxtLink>
+          
         </div>
       </div>
     </section>
@@ -103,7 +104,7 @@
     <!-- Store Info Section -->
     <section class="py-16 bg-beige-50">
       <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold mb-8">La boutique</h2>
+        <h2 class="text-3xl font-bold mb-8">L’atelier</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <h3 class="text-xl font-semibold mb-4">Informations pratiques</h3>
