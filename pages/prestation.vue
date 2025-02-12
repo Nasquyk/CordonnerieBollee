@@ -5,7 +5,7 @@
         ref="titleRef" 
         class="flex flex-center justify-center text-3xl font-bold mb-8 opacity-0"
       >
-        Mes prestations
+        Prestations
       </h2>
 
       <div class="grid grid-cols-1 gap-12">
@@ -51,7 +51,7 @@
             ref="buttonRef"
             class="bg-lightGreen text-white px-6 py-3 rounded-md hover:bg-darkGreen duration-300 opacity-0"
           >
-            Découvrez mes realisations
+            Découvrez mes réalisations
           </button>
         </NuxtLink>
       </div>  
@@ -111,7 +111,7 @@ const services = [
     id: 'reproduction-cles',
     title: 'Reproduction de clés',
     image: clef, // Corrected path
-    description: 'Service rapide et précis de reproduction de clés. Nous utilisons des équipements modernes pour garantir des duplicatas parfaits.  La grande majorité des clés sont effectuées à la minute.',
+    description: "Service rapide et précis de reproduction de clés j'utilise des équipements modernes pour garantir des duplicatas parfaits.  La grande majorité des clés sont effectuées à la minute",
     features: [
       '- Clés plates',
       '- Clés à points',
@@ -127,8 +127,9 @@ const services = [
       '- Entretien cuir lisse',
       '- Entretien suede et nubuck',
       '- Nettoyage sneakers ',
-      '- Dejaunissement des semelles',
-      '- Protection et imperméabilisation'
+      '- Déjaunissement des semelles',
+      '- Protection et imperméabilisation',
+      '- Vente de produits d’entretien',
     ]
   }
 ]
