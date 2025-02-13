@@ -48,7 +48,19 @@
               :class="{ 'opacity-0': !work.showBefore, 'opacity-100': work.showBefore }"
               :style="work.category === 'Reproduction de clés' ? 'object-fit: contain;' : ''"
             >
-            <!-- Bandeaux blancs supprimés -->
+            <div 
+              v-if="work.category !== 'Reproduction de clés'"
+              class="absolute bottom-4 right-4 bg-black bg-opacity-75 text-white px-4 py-2 rounded-full text-sm"
+            >
+              {{ work.showBefore ? 'Après' : 'Avant' }}
+            </div>
+            <div 
+              v-if="work.category !== 'Reproduction de clés'"
+              class="absolute top-4 left-4 bg-black bg-opacity-50 text-white px-4 py-2 rounded-full text-xs opacity-75"
+            >
+              <span class="hidden md:inline">{{ work.showBefore ? "Relâchez pour voir l'avant" : "Survolez pour voir l'après" }}</span>
+              <span class="md:hidden">{{ work.showBefore ? "Relâchez pour voir l'avant" : "Touchez pour voir l'après" }}</span>
+            </div>
           </div>
           <div class="p-6 flex-shrink-0">
             <div class="flex justify-between items-start mb-4">
@@ -87,6 +99,14 @@ export default {
           description: 'Déjaunissement des semelles et nettoyage complet Nike Blazer',
           beforeImage: '/img/nike 1.jpg',
           afterImage: '/img/nike 2.jpg',
+          category: 'Nettoyage et entretien',
+          showBefore: false
+        },
+        {
+          title:'Raf simons',
+          description: 'Déjaunissement des semelles et nettoyage complet Raf Simons',
+          beforeImage: '/img/Raf 2.jpg',
+          afterImage: '/img/Raf 1.jpg',
           category: 'Nettoyage et entretien',
           showBefore: false
         },
