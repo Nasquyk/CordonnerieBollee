@@ -39,22 +39,16 @@
               :alt="work.title + ' avant'"
               class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300"
               :class="{ 'opacity-100': !work.showBefore, 'opacity-0': work.showBefore }"
-              :style="work.title === 'Louis Vuitton - Crème de cirage' ? 'object-fit: contain;' : ''"
+              :style="work.category === 'Reproduction de clés' ? 'object-fit: contain;' : ''"
             >
             <img 
               :src="work.afterImage" 
               :alt="work.title + ' après'"
               class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300"
               :class="{ 'opacity-0': !work.showBefore, 'opacity-100': work.showBefore }"
-              :style="work.title === 'Louis Vuitton - Crème de cirage' ? 'object-fit: contain;' : ''"
+              :style="work.category === 'Reproduction de clés' ? 'object-fit: contain;' : ''"
             >
-            <div class="absolute bottom-4 right-4 bg-black bg-opacity-75 text-white px-4 py-2 rounded-full text-sm">
-              {{ work.showBefore ? 'Après' : 'Avant' }}
-            </div>
-            <div class="absolute top-4 left-4 bg-black bg-opacity-50 text-white px-4 py-2 rounded-full text-xs opacity-75">
-              <span class="hidden md:inline">{{ work.showBefore ? "Relâchez pour voir l'avant" : "Survolez pour voir l'après" }}</span>
-              <span class="md:hidden">{{ work.showBefore ? "Relâchez pour voir l'avant" : "Touchez pour voir l'après" }}</span>
-            </div>
+            <!-- Bandeaux blancs supprimés -->
           </div>
           <div class="p-6 flex-shrink-0">
             <div class="flex justify-between items-start mb-4">
@@ -89,10 +83,10 @@ export default {
           showBefore: false
         },
         {
-          title: 'Louis Vuitton - Crème de cirage',
-          description: 'Entretien du cuir sur une paire de chaussures Louis Vuitton',
-          beforeImage: '/img/LvA.jpg',
-          afterImage: '/img/LvAp.jpg',
+          title:'Nike blazer',
+          description: 'Déjaunissement des semelles et nettoyage complet Nike Blazer',
+          beforeImage: '/img/nike 1.jpg',
+          afterImage: '/img/nike 2.jpg',
           category: 'Nettoyage et entretien',
           showBefore: false
         },
