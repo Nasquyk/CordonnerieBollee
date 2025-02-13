@@ -53,7 +53,7 @@
     <div class="bg-white p-6 rounded-lg shadow-lg max-w-md">
       <h2 class="text-xl font-semibold mb-4">Bonus Réparation</h2>
       <p class="text-gray-700">Le Bonus Réparation est une aide financière permettant de réduire le coût de certaines réparations afin de favoriser la durabilité des objets.<br>
-      <a href="https://www.ecologie.gouv.fr/bonus-reparation" target="_blank" class="text-blue-500 underline">En savoir plus</a>
+      <a href="https://refashion.fr/citoyen/fr/bonus-reparation?gad_source=1" target="_blank" class="text-blue-500 underline">En savoir plus</a>
       </p>
 
       <img src="/assets/img/Bonus-Reparation.png" alt="Bonus Réparation" class="w-full mt-4">
