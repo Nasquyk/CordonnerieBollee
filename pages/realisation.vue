@@ -1,8 +1,9 @@
 <template>
+  <div class="mx-auto p-4 md:p-6 text-center">
   <div class="bg-gradient-to-r from-brown-700 to-brown-900 py-20">
     <div class="container mx-auto px-4 text-center">
       <h2 class="text-4xl font-bold mb-4">Réalisations</h2>
-      <p class="text-xl">Quelques exemples de réalisations faites à l’atelier</p>
+      <p class="text-xl">Quelques exemples de réalisations faites à l’atelier : </p>
     </div>
   </div>
 
@@ -76,6 +77,7 @@
       </div>
     </div>
   </section>
+  </div>
 </template>
 
 <script>
@@ -83,8 +85,8 @@ export default {
   name: 'RealisationsPage',
   data() {
     return {
-      selectedCategory: 'Nettoyage et entretien',
-      categories: ['Nettoyage et entretien', 'Reproduction de clés', 'Réparation de chaussures',],
+      selectedCategory: 'Tous',
+      categories: ['Réparation de chaussures', 'Reproduction de clés','Nettoyage et entretien'],
       works: [
         {
           title: 'Boots',

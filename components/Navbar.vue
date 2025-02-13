@@ -2,7 +2,7 @@
   <nav :class="['flex items-center justify-between transition-colors duration-300 flex-wrap p-6 fixed top-0 left-0 right-0 z-50 shadow-sm mb-4', bgColorClass]">
     <NuxtLink to="/" :class="textColorClass" class="text-xl font-bold">
       <!-- <img src="/logo.png" alt="Logo" class="h-8" /> -->
-      Cordonnerie
+      Cordonnerie Bollée
     </NuxtLink>
     <div class="block lg:hidden">
       <button @click="toggleMenu" class="text-white focus:outline-none">
