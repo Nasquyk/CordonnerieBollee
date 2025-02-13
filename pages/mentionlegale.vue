@@ -20,15 +20,16 @@
     <section class="mb-6">
       <h2 class="text-xl font-semibold">3. Hébergement du site</h2>
       <p>Le site est hébergé par :</p>
-      <p>[Nom de l’hébergeur]</p>
-      <p>[Adresse de l’hébergeur]</p>
-      <p>Téléphone : [Numéro]</p>
+      <p>Vercell</p>
       <p>Site web : [URL]</p>
     </section>
     
     <section class="mb-6">
       <h2 class="text-xl font-semibold">4. Propriété intellectuelle</h2>
       <p>Tous les contenus (textes, images, logos, etc.) présents sur ce site sont la propriété exclusive de <strong>Le Cordonnier Moderne</strong>, sauf mention contraire.</p>
+      <p>Le site a été construit en utilisant les technologies suivantes : NuxtJS et TailwindCSS</p>
+      <p>Le site a été réalisé par <a href="">Victorien Corbel</a></p>
+
     </section>
     
     <section class="mb-6">
@@ -37,17 +38,12 @@
     </section>
     
     <section class="mb-6">
-      <h2 class="text-xl font-semibold">6. Cookies</h2>
-      <p>Le site utilise des cookies à des fins de mesure d’audience et d’amélioration de l’expérience utilisateur.</p>
-    </section>
-    
-    <section class="mb-6">
-      <h2 class="text-xl font-semibold">7. Responsabilité</h2>
+      <h2 class="text-xl font-semibold">6. Responsabilité</h2>
       <p>Le Cordonnier Moderne s'efforce d'assurer l'exactitude des informations diffusées sur ce site.</p>
     </section>
     
     <section class="mb-6">
-      <h2 class="text-xl font-semibold">8. Droit applicable</h2>
+      <h2 class="text-xl font-semibold">7. Droit applicable</h2>
       <p>Les présentes mentions légales sont soumises au droit français.</p>
     </section>
     
