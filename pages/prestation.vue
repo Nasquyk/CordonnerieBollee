@@ -115,6 +115,7 @@ const services = [
     features: [
       '- Clés plates',
       '- Clés à points',
+      '- Clés brevetées (sur devis)',
       '- Badges'
     ]
   },
