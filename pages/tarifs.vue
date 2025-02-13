@@ -6,7 +6,8 @@
         À l’atelier, chaque devis est réalisé avant la mise en œuvre des réparations. <br>
         L’atelier est labellisé 
         <span class="text-blue-500 cursor-pointer underline" @click="showModal = true">Bonus Réparation</span> 
-        et ce bonus est inclus dans la grille tarifaire.
+        et ce bonus est inclus dans la grille tarifaire.<br>
+       
       </p>
 
     <div class="flex flex-col md:flex-row justify-center gap-4 w-full">
@@ -51,7 +52,10 @@
   <div v-if="showModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
     <div class="bg-white p-6 rounded-lg shadow-lg max-w-md">
       <h2 class="text-xl font-semibold mb-4">Bonus Réparation</h2>
-      <p class="text-gray-700">Le Bonus Réparation est une aide financière permettant de réduire le coût de certaines réparations afin de favoriser la durabilité des objets.</p>
+      <p class="text-gray-700">Le Bonus Réparation est une aide financière permettant de réduire le coût de certaines réparations afin de favoriser la durabilité des objets.<br>
+      <a href="https://www.ecologie.gouv.fr/bonus-reparation" target="_blank" class="text-blue-500 underline">En savoir plus</a>
+      </p>
+
       <img src="/assets/img/Bonus-Reparation.png" alt="Bonus Réparation" class="w-full mt-4">
       <button @click="showModal = false" class="mt-4 py-2shadow bg-brown hover:bg-[#54361f] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Fermer</button>
     </div>

@@ -111,7 +111,7 @@ const services = [
     id: 'reproduction-cles',
     title: 'Reproduction de clés',
     image: clef, // Corrected path
-    description: "Service rapide et précis de reproduction de clés j'utilise des équipements modernes pour garantir des duplicatas parfaits.  La grande majorité des clés sont effectuées à la minute",
+    description: "Service rapide et précis de reproduction de clés, j'utilise des équipements modernes pour garantir des duplicatas parfaits.  La grande majorité des clés sont effectuées à la minute",
     features: [
       '- Clés plates',
       '- Clés à points',

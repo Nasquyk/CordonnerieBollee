@@ -4,7 +4,7 @@
     <section class="relative h-screen bg-black">
       <div class="absolute inset-0 z-10">
         <img 
-          src="@/assets/img/LeatherBlackShoes.jpg" 
+          src="@/assets/img/hero.jpeg" 
           alt="portrait" 
           class="w-full h-full object-cover opacity-50"
         />

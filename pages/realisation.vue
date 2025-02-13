@@ -1,21 +1,13 @@
 <template>
-
   <div class="bg-gradient-to-r from-brown-700 to-brown-900 py-20">
     <div class="container mx-auto px-4 text-center">
-      <h2 class="text-4xl font-bold mb-4">Nos Réalisations</h2>
-      <p class="text-xl">Découvrez notre savoir-faire à travers nos travaux de restauration</p>
+      <h2 class="text-4xl font-bold mb-4">Réalisations</h2>
+      <p class="text-xl">Quelques exemples de réalisations faites à l’atelier</p>
     </div>
   </div>
 
-
-  <section id="realisations" class="py-16 ">
+  <section id="realisations" >
     <div class="container mx-auto px-4">
-   
-      <p class="text-center mb-8 text-gray-600">
-        <span class="hidden md:inline">Survolez les images pour voir l'avant/après.</span>
-        <span class="md:hidden">Touchez les images pour voir l'avant/après.</span>
-      </p>
-
       <div class="flex flex-wrap gap-4 mb-12 justify-center">
         <button 
           v-for="category in categories" 
@@ -28,56 +20,51 @@
         </button>
       </div>
 
-      
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div 
-      v-for="(work, index) in filteredWorks" 
-      :key="index"
-      class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col"
-    >
-      
-      <div 
-        class="relative h-[600px] md:h-120 group cursor-pointer flex-grow"
-        @mouseenter="work.showBefore = true"
-        @mouseleave="work.showBefore = false"
-        @click="toggleBeforeAfter(work)"
-      >
-        
-        <img 
-          :src="work.beforeImage" 
-          :alt="work.title + ' avant'"
-          class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300"
-          :class="{ 'opacity-100': !work.showBefore, 'opacity-0': work.showBefore }"
+          v-for="(work, index) in filteredWorks" 
+          :key="index"
+          class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col"
+          :class="work.category === 'Reproduction de clés' ? 'max-h-[600px]' : 'max-h-[800px]'"
         >
-   
-        <img 
-          :src="work.afterImage" 
-          :alt="work.title + ' après'"
-          class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300"
-          :class="{ 'opacity-0': !work.showBefore, 'opacity-100': work.showBefore }"
-        >
-            
-          
+          <div 
+            class="relative h-auto"
+            :class="work.category === 'Reproduction de clés' ? 'md:h-[600px]' : 'md:h-[800px]'"
+            @mouseenter="work.showBefore = true"
+            @mouseleave="work.showBefore = false"
+            @click="toggleBeforeAfter(work)"
+          >
+            <img 
+              :src="work.beforeImage" 
+              :alt="work.title + ' avant'"
+              class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300"
+              :class="{ 'opacity-100': !work.showBefore, 'opacity-0': work.showBefore }"
+              :style="work.title === 'Louis Vuitton - Crème de cirage' ? 'object-fit: contain;' : ''"
+            >
+            <img 
+              :src="work.afterImage" 
+              :alt="work.title + ' après'"
+              class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300"
+              :class="{ 'opacity-0': !work.showBefore, 'opacity-100': work.showBefore }"
+              :style="work.title === 'Louis Vuitton - Crème de cirage' ? 'object-fit: contain;' : ''"
+            >
             <div class="absolute bottom-4 right-4 bg-black bg-opacity-75 text-white px-4 py-2 rounded-full text-sm">
-              {{ work.showBefore ? ' Après' : ' Avant' }}
+              {{ work.showBefore ? 'Après' : 'Avant' }}
             </div>
-
-          
             <div class="absolute top-4 left-4 bg-black bg-opacity-50 text-white px-4 py-2 rounded-full text-xs opacity-75">
-              <span class="hidden md:inline">{{ work.showBefore ? "Relâchez pour voir  l'avant" : "Survolez pour voir l'après" }}</span>
-              <span class="md:hidden">{{ work.showBefore ? "Relâchez pour voir  l'avant" : "Touchez pour voir l'après" }}</span>
+              <span class="hidden md:inline">{{ work.showBefore ? "Relâchez pour voir l'avant" : "Survolez pour voir l'après" }}</span>
+              <span class="md:hidden">{{ work.showBefore ? "Relâchez pour voir l'avant" : "Touchez pour voir l'après" }}</span>
             </div>
           </div>
-
-          <div class="p-6">
+          <div class="p-6 flex-shrink-0">
             <div class="flex justify-between items-start mb-4">
               <h3 class="text-xl font-bold text-gray-900">{{ work.title }}</h3>
-              <span class="text-sm text-brown-600 bg-brown-100 px-3 py-1 rounded-full">
+             <!-- <span class="text-sm text-brown-600 bg-brown-100 px-3 py-1 rounded-full">
                 {{ work.category }}
               </span>
+            --->
             </div>
             <p class="text-gray-600 mb-4">{{ work.description }}</p>
-            
           </div>
         </div>
       </div>
@@ -90,22 +77,30 @@ export default {
   name: 'RealisationsPage',
   data() {
     return {
-      selectedCategory: 'Tous',
-      categories: ['Tous', 'Réparation de chaussures', 'Reproduction de clés', 'Nettoyage et entretien'],
+      selectedCategory: 'Nettoyage et entretien',
+      categories: ['Nettoyage et entretien', 'Reproduction de clés', 'Réparation de chaussures',],
       works: [
         {
-          title: 'Text',
-          description: 'texte de description',
-          beforeImage: '/img/dior.jpg',
-          afterImage: '/img/dior _.jpg',
-          category: 'Réparation de chaussures',
+          title: 'Boots',
+          description: 'Entretien du cuir et nouvelle teinte sur une paire de boots',
+          beforeImage: '/img/BootsAvant.jpg',
+          afterImage: '/img/BootsAprès.jpg',
+          category: 'Nettoyage et entretien',
           showBefore: false
         },
         {
-          title: 'Restauration Chaussures Cuir',
-          description: 'Rénovation complète avec teinture et réparation de la semelle sur des Oxford en cuir pleine fleur',
-          beforeImage: '/img/projet 3 avant.jpg',
-          afterImage: '/img/projet 3 après.jpg',
+          title: 'Louis Vuitton - Crème de cirage',
+          description: 'Entretien du cuir sur une paire de chaussures Louis Vuitton',
+          beforeImage: '/img/LvA.jpg',
+          afterImage: '/img/LvAp.jpg',
+          category: 'Nettoyage et entretien',
+          showBefore: false
+        },
+        {
+          title: 'Reproduction de clés',
+          description: 'Reproduction de clés et badges',
+          beforeImage: '/img/Reproduction_resized.jpg',
+          afterImage: '/img/Reproduction_resized.jpg',
           category: 'Reproduction de clés',
           showBefore: false
         },

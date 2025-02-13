@@ -21,7 +21,7 @@
           <input
             class="shadow mb-4 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             type="text"
-            placeholder="Téléphone"
+            placeholder="Téléphone (facultatif)"
             name="telephone"
             pattern="^(\+33|0)[1-9](\d{2}){4}$"
             title="Veuillez entrer un numéro de téléphone valide."
