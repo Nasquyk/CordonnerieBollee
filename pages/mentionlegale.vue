@@ -36,9 +36,14 @@
       <h2 class="text-xl font-semibold">5. Protection des données personnelles</h2>
       <p>Les informations recueillies via le site sont destinées à des fins de gestion des demandes et ne sont en aucun cas cédées à des tiers.</p>
     </section>
+
+    <section class="mb-6">
+      <h2 class="text-xl font-semibold">6. Cookies</h2>
+      <p>Le site utilise des cookies à des fins de mesure d’audience et d’amélioration de l’expérience utilisateur. Vous pouvez configurer votre navigateur pour refuser ces cookies.</p>
+    </section>
     
     <section class="mb-6">
-      <h2 class="text-xl font-semibold">6. Responsabilité</h2>
+      <h2 class="text-xl font-semibold">7. Responsabilité</h2>
       <p>Le Cordonnier Moderne s'efforce d'assurer l'exactitude des informations diffusées sur ce site.</p>
     </section>
     
