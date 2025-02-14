@@ -44,6 +44,7 @@
                   'object-contain': work.category === 'Reproduction de clés',
                   'object-cover': work.category !== 'Reproduction de clés'
                 }"
+                @mouseover="showAfter(work, true)" @mouseleave="showAfter(work, false)"
               >
               <img 
                 :src="work.afterImage" 
@@ -55,6 +56,7 @@
                   'object-contain': work.category === 'Reproduction de clés',
                   'object-cover': work.category !== 'Reproduction de clés'
                 }"
+                @mouseover="showAfter(work, true)" @mouseleave="showAfter(work, false)"
               >
               <div 
                 v-if="work.category !== 'Reproduction de clés'"
@@ -137,6 +139,11 @@ export default {
   methods: {
     toggleBeforeAfter(work) {
       work.showBefore = !work.showBefore;
+    },
+    showAfter(work, show) {
+      if (window.innerWidth >= 768) {
+        work.showBefore = show;
+      }
     },
     getImageHeight(category) {
       // Sur mobile (vérifie si la fenêtre fait moins de 768px)
