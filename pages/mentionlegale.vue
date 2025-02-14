@@ -63,7 +63,7 @@ export default {
             <div class="space-y-4">
               <p>Tous les contenus (textes, images, logos, etc.) présents sur ce site sont la propriété exclusive de <strong>Le Cordonnier Moderne</strong>, sauf mention contraire. Toute reproduction ou utilisation sans autorisation est interdite.</p>
               <p>Le site a été construit en utilisant les technologies suivantes : NuxtJS et TailwindCSS.</p>
-              <p >Le site a été réalisé par <a href="https://portfolio-nuxt-js.vercel.app/" class="text-blue-600 hover:text-blue-800" target="_blank"> Victorien Corbel </a>.</p>
+              <p >Le site a été réalisé par <a href="https://portfolio-nuxt-js.vercel.app/" class="text-blue-600 hover:text-blue-800" target="_blank"> Victorien Corbel</a>.</p>
             </div>
           `
         },

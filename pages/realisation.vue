@@ -102,7 +102,7 @@ export default {
           showBefore: false
         },
         {
-          title:'Nike blazer',
+          title:'Nike Blazer',
           description: 'Déjaunissement des semelles et nettoyage complet Nike Blazer',
           beforeImage: '/img/nike 1.jpg',
           afterImage: '/img/nike 2.jpg',
@@ -110,7 +110,7 @@ export default {
           showBefore: false
         },
         {
-          title:'Raf simons',
+          title:'Raf Simons',
           description: 'Déjaunissement des semelles et nettoyage complet Raf Simons',
           beforeImage: '/img/Raf 2.jpg',
           afterImage: '/img/Raf 1.jpg',
@@ -118,8 +118,8 @@ export default {
           showBefore: false
         },
         {
-          title: 'Reproduction de clés',
-          description: 'Reproduction de clés et badges',
+          title: 'Reproduction de clés et de badges',
+          description: ' Service minute',
           beforeImage: '/img/Reproduction_resized.jpg',
           afterImage: '/img/Reproduction_resized.jpg',
           category: 'Reproduction de clés',

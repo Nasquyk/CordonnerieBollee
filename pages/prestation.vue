@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-cream-50 py-20">
+  <div class=" py-20">
     <div class="max-w-3xl mx-auto">
       <h2 
         ref="titleRef" 

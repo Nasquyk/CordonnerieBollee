@@ -118,7 +118,7 @@
               </p>
               <p>
                 <strong>Adresse :</strong><br />
-                59 bis avenue Bollée, 72 000 Le Mans
+                59 Bis Avenue Bollée, 72 000 Le Mans
               </p>
             </div>
           </div>
