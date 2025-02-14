@@ -91,7 +91,7 @@ export default {
   data() {
     return {
       selectedCategory: 'Tous',
-      categories: ['Tous', 'Réparation de chaussures', 'Reproduction de clés', 'Nettoyage et entretien'],
+      categories: ['Réparation de chaussures', 'Reproduction de clés', 'Nettoyage et entretien'],
       works: [
         {
           title: 'Boots',
