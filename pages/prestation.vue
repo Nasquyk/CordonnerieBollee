@@ -72,11 +72,6 @@ import tableAvecMachine from '@/assets/img/tableAvecMachine.jpg';
 import clef from '@/assets/img/clefService.jpg'
 import nettoyage from '@/assets/img/produit.jpg'
 
-
-
-
-
-
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger)
 
@@ -116,6 +111,8 @@ const services = [
       '- Clés plates',
       '- Clés à points',
       '- Clés brevetées (sur devis)',
+      '- Clés à gorge',
+      '- Clés vélo SETRAM',
       '- Badges'
     ]
   },

@@ -15,7 +15,7 @@
 
       <footer class="mt-8 text-center text-gray-600">
         <p>ROSE Vincent</p>
-        <p class="text-sm mt-2">Le Cordonnier Moderne - 59 Bis Avenue Bollée – 72 000 LE MANS</p>
+        <p class="text-sm mt-2">Cordonnerie Bollée - 59 Bis Avenue Bollée – 72 000 LE MANS</p>
       </footer>
     </div>
   </div>
@@ -30,17 +30,17 @@ export default {
         {
           title: "1. Identification du vendeur",
           content: `
-            <p>Nom de l'entreprise : Le Cordonnier Moderne</p>
+            <p>Nom de l'entreprise : EI Vincent ROSE (Cordonnerie Bollée)</p>
             <p>Adresse : 59 Bis Avenue Bollée – 72 000 LE MANS</p>
             <p>Numéro SIRET : 947 554 226 000 29</p>
             <p>Numéro de téléphone : 06.08.63.83.32</p>
-            <p>Adresse e-mail : lecordonniermoderne@gmail.com</p>
+            <p>Adresse e-mail : cordonneriebollee@gmail.com</p>
           `
         },
         {
           title: "2. Objet",
           content: `
-            <p>Les présentes Conditions Générales de Vente (CGV) régissent les relations contractuelles entre Le Cordonnier Moderne (ci-après "le Vendeur") et toute personne physique ou morale (ci-après "le Client") passant commande pour des services de cordonnerie, reproduction de clés, réalisation de tampons et autres prestations proposées par le Vendeur.</p>
+            <p>Les présentes Conditions Générales de Vente (CGV) régissent les relations contractuelles entre EI Vincent Rose (Cordonnerie Bollée) et toute personne physique ou morale (ci-après "le Client") passant commande pour des services de cordonnerie, reproduction de clés, réalisation de tampons et autres prestations proposées par le Vendeur.</p>
           `
         },
         {
@@ -95,11 +95,11 @@ export default {
               </div>
               <div>
                 <h3 class="font-medium">Responsabilité du Client</h3>
-                <p>Le client est responsable de la conservation du ticket de dépôt. Le Cordonnier Moderne décline toutes responsabilités en cas de perte ou de vol de ce ticket. Sans présentation du ticket, nous ne pourrons procéder au retrait de la commande, et nous nous réservons le droit de ne pas restituer les articles.</p>
+                <p>Le client est responsable de la conservation du ticket de dépôt. EI Vincent Rose (Cordonnerie Bollée) décline toutes responsabilités en cas de perte ou de vol de ce ticket. Sans présentation du ticket, nous ne pourrons procéder au retrait de la commande, et nous nous réservons le droit de ne pas restituer les articles.</p>
               </div>
               <div>
                 <h3 class="font-medium">Retrait Non Réalisé</h3>
-                <p>Si le retrait n'est pas effectué dans le délai spécifié, Le Cordonnier Moderne se réserve le droit de considérer la commande comme abandonnée, et les articles pourront être remis en vente ou détruits, sans remboursement possible dans un délai de 6 mois.</p>
+                <p>Si le retrait n'est pas effectué dans le délai spécifié, EI Vincent Rose (Cordonnerie Bollée) se réserve le droit de considérer la commande comme abandonnée, et les articles pourront être remis en vente ou détruits, sans remboursement possible dans un délai de 6 mois.</p>
               </div>
             </div>
           `
@@ -125,26 +125,21 @@ export default {
             </div>
           `
         },
+
         {
-          title: "12. Droit de rétractation",
-          content: `
-            <p>Conformément à l'article L221-18 du Code de la consommation, le Client dispose d'un droit de rétractation de 14 jours pour les produits achetés en magasin, à condition que les articles soient retournés dans leur emballage d'origine, non ouverts et non utilisés. Aucun article déballé ne sera repris ni échangé. Ce droit ne s'applique pas aux services de cordonnerie et de reproduction de clés, réalisés sur mesure ou personnalisés.</p>
-          `
-        },
-        {
-          title: "13. Litiges",
+          title: "12. Litiges",
           content: `
             <p>En cas de litige, les parties s'efforceront de trouver une solution amiable. À défaut, le litige sera soumis aux tribunaux compétents du ressort du siège social du Vendeur.</p>
           `
         },
         {
-          title: "14. Protection des données personnelles",
+          title: "13. Protection des données personnelles",
           content: `
             <p>Le Vendeur s'engage à respecter la confidentialité des données personnelles communiquées par le Client. Ces données sont nécessaires à la gestion des commandes et ne seront pas communiquées à des tiers sans l'accord du Client.</p>
           `
         },
         {
-          title: "15. Modification des CGV",
+          title: "14. Modification des CGV",
           content: `
             <p>Le Vendeur se réserve le droit de modifier les présentes CGV à tout moment. Les nouvelles CGV seront applicables à toute commande passée après leur mise en ligne ou leur communication au Client.</p>
           `

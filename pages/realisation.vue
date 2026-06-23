@@ -15,7 +15,7 @@
             :key="category"
             @click="selectedCategory = category"
             class="px-6 py-2 rounded-full"
-            :class="selectedCategory === category ? 'bg-lightGreen text-white' : 'bg-darkGreen text-white hover:bg-gray-300'"
+            :class="selectedCategory === category ? 'bg-[#4B692F] text-white' : 'bg-[#193B1B] text-white hover:bg-gray-300'"
           >
             {{ category }}
           </button>
@@ -90,6 +90,7 @@ export default {
   name: 'RealisationsPage',
   data() {
     return {
+      windowWidth: 1024, // Valeur par défaut pour éviter le plantage SSR côté serveur
       selectedCategory: 'Tous',
       categories: ['Réparation de chaussures', 'Reproduction de clés', 'Nettoyage et entretien'],
       works: [
@@ -99,6 +100,22 @@ export default {
           beforeImage: '/img/BootsAvant.jpg',
           afterImage: '/img/BootsAprès.jpg',
           category: 'Nettoyage et entretien',
+          showBefore: false
+        },
+        {
+          title: 'Chaussures de ville',
+          description: 'Restauration complète d’une paire de chaussures de ville',
+          beforeImage: '/img/Real 1-Avant.jpg',
+          afterImage: '/img/Real 1-Apres.jpg',
+          category: 'Réparation de chaussures',
+          showBefore: false
+        },
+        {
+          title: 'Chaussure',
+          description: 'Restauration complète d’une paire de chaussure',
+          beforeImage: '/img/Real 2-Avant.jpg',
+          afterImage: '/img/Real 2-Apres.jpg',
+          category: 'Réparation de chaussures',
           showBefore: false
         },
         {
@@ -124,6 +141,22 @@ export default {
           afterImage: '/img/Reproduction_resized.jpg',
           category: 'Reproduction de clés',
           showBefore: false
+        },
+        {
+          title: 'Reproduction de clés vélo SETRAM',
+          description: ' Service minute',
+          beforeImage: '/img/Clé vélo SETRAM.jpg',
+          afterImage: '/img/Clé vélo SETRAM.jpg',
+          category: 'Reproduction de clés',
+          showBefore: false
+        },
+        {
+          title: 'Reproduction de clés',
+          description: ' Service minute',
+          beforeImage: '/img/Toutes clés.jpg',
+          afterImage: '/img/Toutes clés.jpg',
+          category: 'Reproduction de clés',
+          showBefore: false
         }
       ]
     }
@@ -141,34 +174,34 @@ export default {
       work.showBefore = !work.showBefore;
     },
     showAfter(work, show) {
-      if (window.innerWidth >= 768) {
+      if (this.windowWidth >= 768) {
         work.showBefore = show;
       }
     },
     getImageHeight(category) {
-      // Sur mobile (vérifie si la fenêtre fait moins de 768px)
-      if (window.innerWidth < 768) {
+      // Utilise la variable réactive au lieu de window.innerWidth
+      if (this.windowWidth < 768) {
         return '400px';
       }
       
-      // Sur PC
       if (category === 'Reproduction de clés') {
         return '300px';
       }
-      return '600px'; // Images plus grandes pour les autres catégories sur PC
+      return '600px';
+    },
+    handleResize() {
+      // Sûr à 100% car cette méthode n'est appelée que côté client
+      this.windowWidth = window.innerWidth;
     }
   },
   mounted() {
-    // Ajouter un listener pour mettre à jour les hauteurs lors du redimensionnement
-    window.addEventListener('resize', () => {
-      this.$forceUpdate();
-    });
+    // On récupère la taille dès que le composant est monté dans le navigateur
+    this.handleResize();
+    window.addEventListener('resize', this.handleResize);
   },
   beforeDestroy() {
-    // Nettoyer le listener
-    window.removeEventListener('resize', () => {
-      this.$forceUpdate();
-    });
+    // Nettoyage propre du listener
+    window.removeEventListener('resize', this.handleResize);
   }
 }
 </script>

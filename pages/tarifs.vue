@@ -53,7 +53,7 @@
     <div class="bg-white p-6 rounded-lg shadow-lg max-w-md">
       <h2 class="text-xl font-semibold mb-4">Bonus Réparation</h2>
       <p class="text-gray-700">Le Bonus Réparation est une aide financière permettant de réduire le coût de certaines réparations afin de favoriser la durabilité des objets.<br>
-      <a href="https://refashion.fr/citoyen/fr/bonus-reparation?gad_source=1" target="_blank" class="text-blue-500 underline">En savoir plus</a>
+      <a href="https://refashion.fr/" target="_blank" class="text-blue-500 underline">En savoir plus</a>
       </p>
 
       <img src="/assets/img/Bonus-Reparation.png" alt="Bonus Réparation" class="w-full mt-4">
@@ -72,12 +72,12 @@ const tarifs = ref({
     { name: "Talon cranté", price: "20€ (la paire)" },
     { name: "Patin cranté", price: "24€ (la paire)" },
     { name: "Patin épais cuir", price: "47€ (la paire)" },
-    { name: "Patin épais caoutchouc", price: "29€ (la paire)" },
+    { name: "Patin épais caoutchouc", price: "37€ (la paire)" },
     { name: "Talon aiguille", price: "17€ (la paire)" },
-    { name: "Redresse", price: "A partir de 10€ (la paire)" },
-    { name: "Ressemelage caoutchouc", price: "A partir de 70€ (la paire)" },
-    { name: "Changement trépoint", price: "20€ (la paire)" },
-    { name: "Mise en forme", price: "9€ (la paire)" },
+    { name: "Redresse", price: "A partir de 12€ (la paire)" },
+    { name: "Ressemelage caoutchouc", price: "A partir de 90€ (la paire)" },
+    { name: "Changement trépointe", price: "20€ (la paire)" },
+    { name: "Mise en forme", price: "12€ (la paire)" },
     { name: "Fers haricots", price: "4€ (la paire)" },
     { name: "Fers encastrés", price: "20€ (la paire)" },
     { name: "Complet sneakers", price: "49€ (la paire)" },
@@ -94,12 +94,13 @@ const tarifs = ref({
   ],
   " Maroquinerie": [
     { name: "Couture simple", price: "à partir de 12€" },
-    { name: "Pièce invisible ", price: "15€" }
+    { name: "Pièce invisible ", price: "17,5€" }
   ],
   "Clés et badges minute": [
     { name: "Clé plate", price: "7.5€" },
     { name: "Clé plate couleur ", price: "8.5€" },
     { name: "Clé à points", price: "29€" },
+    { name: "Clé à gorge", price: "19€" },
     { name: "Clé brevetée", price: " sur devis" },
     { name: "Badge", price: "à partir de 29€" }
   ],

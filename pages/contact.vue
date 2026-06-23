@@ -1,16 +1,15 @@
 <template>
   <div class="py-6 flex flex-col justify-center sm:py-12">
     <div class="relative py-3 sm:max-w-xl sm:mx-auto lg:mt-16">
-      <div class="absolute inset-0 bg-gradient-to-r from-darkGreen to-lightGreen shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
+      <div class="absolute inset-0 bg-linear-to-r from-dark-green to-light-green shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
       <div class="text-white relative px-4 py-10 bg-[#628B3F] shadow-lg sm:rounded-3xl sm:p-20">
         <div class="text-center pb-6">
           <h1 class="text-3xl">Contactez-moi !</h1>
           <p class="text-gray-300">Une question ? Contactez-moi !</p>
         </div>
-        
         <form action="https://formsubmit.co/lecordonniermoderne@gmail.com" method="POST">
           <input
-            class="shadow mb-4 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            class="shadow mb-4 appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             type="text"
             placeholder="Nom"
             name="name"
@@ -19,16 +18,15 @@
             required
           />
           <input
-            class="shadow mb-4 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            class="shadow mb-4 appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             type="text"
             placeholder="Téléphone (facultatif)"
             name="telephone"
             pattern="^(\+33|0)[1-9](\d{2}){4}$"
             title="Veuillez entrer un numéro de téléphone valide."
-         
           />
           <input
-            class="shadow mb-4 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            class="shadow mb-4 appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             type="email"
             placeholder="Email"
             name="email"
@@ -37,7 +35,7 @@
             required
           />
           <input
-            class="shadow mb-4 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            class="shadow mb-4 appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             type="text"
             placeholder="Sujet"
             name="sujet"
@@ -46,7 +44,7 @@
             required
           />
           <textarea
-            class="shadow mb-4 min-h-0 appearance-none border rounded h-64 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            class="shadow mb-4 min-h-0 appearance-none border border-gray-300 rounded h-64 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             placeholder="Taper votre message ici..."
             name="message"
             pattern=".{1,500}"
@@ -72,9 +70,11 @@
 </template>
 
 <script setup>
-
 </script>
 
-<style lang="scss" scoped>
+<style>
 
+input, textarea {
+  background-color: #f5f5f5;
+}
 </style>

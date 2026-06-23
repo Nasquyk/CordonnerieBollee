@@ -1,16 +1,14 @@
 <template>
   <div class="flex flex-col min-h-screen">
     <!-- Hero Section -->
-    <section class="relative h-screen bg-black">
-      <div class="absolute inset-0 z-10">
-        <img 
-          src="@/assets/img/hero.jpeg" 
-          alt="portrait" 
-          class="w-full h-full object-cover opacity-50"
-        />
-        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-      </div>
-      <div class="relative container mx-auto px-4 h-full flex items-center z-20">
+    <section class="relative h-screen bg-black overflow-hidden">
+      <img 
+        src="@/assets/img/hero.jpeg" 
+        alt="portrait" 
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-black/50"></div>
+      <div class="absolute inset-0 container mx-auto px-4 h-full flex items-center z-10">
         <div class="text-beige text-center md:text-left">
           <h1 class="text-3xl md:text-5xl font-bold mb-6">
             Bienvenue à la Cordonnerie Bollée !
@@ -61,25 +59,25 @@
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <NuxtLink to="/prestation#reparation-chaussures">
-            <div class="relative overflow-hidden rounded-lg h-[400px] md:h-[500px]"> <!-- Ajustement de la hauteur -->
-              <img 
-                src="/assets/img/tableAvecMachine.jpg" 
-                alt="Restauration de Chaussure" 
-                class="w-full h-full object-cover"
-              /> 
-              <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-                <h3 class="text-white text-lg md:text-xl font-semibold">Réparation de chaussures</h3>
-              </div>
-            </div>
+            <div class="relative overflow-hidden rounded-lg h-[400px] md:h-[500px]">
+  <img 
+    src="@/assets/img/tableAvecMachine.jpg" 
+    alt="Restauration de Chaussure" 
+    class="w-full h-full object-cover"
+  /> 
+  <div class="absolute inset-0 bg-black/70  flex items-center justify-center">
+    <h3 class="text-white text-lg md:text-xl font-semibold">Réparation de chaussures</h3>
+  </div>
+</div>
           </NuxtLink>
           <NuxtLink to="/prestation#reproduction-cles">
             <div class="relative overflow-hidden rounded-lg h-[400px] md:h-[500px]"> <!-- Ajustement de la hauteur -->
               <img 
-                src="/assets/img/clefService.jpg" 
+                src="@/assets/img/clefService.jpg" 
                 alt="Reproduction de Clés" 
                 class="w-full h-full object-cover"
               /> 
-              <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+              <div class="absolute inset-0 bg-black/70 flex items-center justify-center">
                 <h3 class="text-white text-lg md:text-xl font-semibold">Reproduction de clés</h3>
               </div>
             </div>
@@ -87,11 +85,11 @@
           <NuxtLink to="/prestation#vente-produits">
             <div class="relative overflow-hidden rounded-lg h-[400px] md:h-[500px]"> <!-- Ajustement de la hauteur -->
               <img 
-                src="/assets/img/produit.jpg" 
+                src="@/assets/img/produit.jpg" 
                 alt="Vente de Produit d'entretien" 
                 class="w-full h-full object-cover"
               /> 
-              <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+              <div class="absolute inset-0 bg-black/70 flex items-center justify-center">
                 <h3 class="text-white text-lg md:text-xl font-semibold">Nettoyage et entretien</h3>
               </div>
             </div>
@@ -145,7 +143,6 @@ import ImageComparison from "@/components/ImageComparison.vue";
 
 
 import Footer from "@/components/Footer.vue";
-import { NuxtImg } from "#components";
 
 let gsap;
 

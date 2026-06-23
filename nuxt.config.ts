@@ -6,12 +6,10 @@ export default defineNuxtConfig({
 
   postcss: {
     plugins: {
-      tailwindcss: {},
+      '@tailwindcss/postcss': {},
       autoprefixer: {},
     },
-  
   },
-
   app: {
     head: {
       title: 'Cordonnerie Bollée',
@@ -26,10 +24,11 @@ export default defineNuxtConfig({
   },
 
   plugins: ["~/plugins/gsap.client.js"],
-  modules: ['@nuxt/image'],
-  image: {
-    format: ['webp', 'avif'],
-    quality: 80,
-     dir: 'assets/img'
-  },
+  vite: {
+    optimizeDeps: {
+      include: [
+        'gsap/ScrollTrigger',
+      ]
+    }
+  }
 })
