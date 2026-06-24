@@ -27,7 +27,7 @@
               
               class="w-full h-64 object-cover"
             >
-            <div class="absolute inset-0 bg-black h-64 bg-opacity-40 flex items-center justify-center w-full">
+            <div class="absolute inset-0 bg-black/70 h-64   flex items-center justify-center w-full">
               <h3 class="text-white text-lg md:text-xl font-semibold">
                 {{ service.title }}
               </h3>
@@ -49,7 +49,7 @@
         <NuxtLink to="/realisation">
           <button 
             ref="buttonRef"
-            class="bg-lightGreen text-white px-6 py-3 rounded-md hover:bg-darkGreen duration-300 opacity-0"
+            class="bg-light-green text-white px-6 py-3 rounded-md hover:bg-dark-green duration-300 opacity-0"
           >
             Découvrez mes réalisations
           </button>

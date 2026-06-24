@@ -9,7 +9,7 @@
         </div>
         <form action="https://formsubmit.co/lecordonniermoderne@gmail.com" method="POST">
           <input
-            class="shadow mb-4 appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            class="input shadow mb-4 appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             type="text"
             placeholder="Nom"
             name="name"
@@ -18,7 +18,7 @@
             required
           />
           <input
-            class="shadow mb-4 appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            class="input shadow mb-4 appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             type="text"
             placeholder="Téléphone (facultatif)"
             name="telephone"
@@ -26,7 +26,7 @@
             title="Veuillez entrer un numéro de téléphone valide."
           />
           <input
-            class="shadow mb-4 appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            class="input shadow mb-4 appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             type="email"
             placeholder="Email"
             name="email"
@@ -35,7 +35,7 @@
             required
           />
           <input
-            class="shadow mb-4 appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            class="input shadow mb-4 appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             type="text"
             placeholder="Sujet"
             name="sujet"
@@ -44,7 +44,7 @@
             required
           />
           <textarea
-            class="shadow mb-4 min-h-0 appearance-none border border-gray-300 rounded h-64 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            class="input shadow mb-4 min-h-0 appearance-none border border-gray-300 rounded h-64 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             placeholder="Taper votre message ici..."
             name="message"
             pattern=".{1,500}"
@@ -54,12 +54,12 @@
           ></textarea>
           <div class="flex justify-between">
             <input
-              class="shadow bg-brown hover:bg-[#54361f] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              class="shadow bg-[#815839] hover:bg-[#54361f] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="submit"
               value="Envoyer ➤"
             />
             <input
-              class="shadow bg-brown hover:bg-[#54361f] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              class="shadow bg-[#815839] hover:bg-[#54361f] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="reset"
             />
           </div>
@@ -74,7 +74,7 @@
 
 <style>
 
-input, textarea {
+.input {
   background-color: #f5f5f5;
 }
 </style>
