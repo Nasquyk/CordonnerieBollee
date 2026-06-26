@@ -14,7 +14,7 @@
             Bienvenue à la Cordonnerie Bollée !
           </h1>
           
-          <button @click="scrollToSection" class="bg-lightGreen text-white px-6 py-3 rounded-md hover:bg-darkGreen duration-300">
+          <button @click="scrollToSection" class="bg-light-green text-white px-6 py-3 rounded-md hover:bg-dark-green duration-300">
             Me découvrir
           </button>
         </div>

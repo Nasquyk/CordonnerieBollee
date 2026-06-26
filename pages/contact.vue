@@ -7,7 +7,7 @@
           <h1 class="text-3xl">Contactez-moi !</h1>
           <p class="text-gray-300">Une question ? Contactez-moi !</p>
         </div>
-        <form action="https://formsubmit.co/lecordonniermoderne@gmail.com" method="POST">
+        <form action="https://formsubmit.co/cordonneriebollee@gmail.com" method="POST">
           <input
             class="input shadow mb-4 appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             type="text"

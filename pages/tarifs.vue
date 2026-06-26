@@ -74,8 +74,8 @@ const tarifs = ref({
     { name: "Patin épais cuir", price: "47€ (la paire)" },
     { name: "Patin épais caoutchouc", price: "37€ (la paire)" },
     { name: "Talon aiguille", price: "17€ (la paire)" },
-    { name: "Redresse", price: "A partir de 12€ (la paire)" },
-    { name: "Ressemelage caoutchouc", price: "A partir de 90€ (la paire)" },
+    { name: "Redresse", price: "à partir de 12€ (la paire)" },
+    { name: "Ressemelage caoutchouc", price: "à partir de 90€ (la paire)" },
     { name: "Changement trépointe", price: "20€ (la paire)" },
     { name: "Mise en forme", price: "12€ (la paire)" },
     { name: "Fers haricots", price: "4€ (la paire)" },
@@ -83,7 +83,7 @@ const tarifs = ref({
     { name: "Complet sneakers", price: "49€ (la paire)" },
     { name: "Glissoirs / Antiglissoires", price: "28€ (la paire)" },
     { name: "Semelle de propreté", price: "18€ (la paire)" },
-    { name: "Collage", price: "A partir de 12€" }
+    { name: "Collage", price: "à partir de 12€" }
   ],
   "Entretien": [
     { name: "Entretien du cuir (nettoyage, crémage, imperméabilisation)", price: "à partir de 20€" },

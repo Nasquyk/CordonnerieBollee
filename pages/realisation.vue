@@ -72,8 +72,8 @@
                 <span class="md:hidden">Touchez pour voir {{ work.showBefore ? "l'avant" : "l'après" }}</span>
               </div>
             </div>
-            <div class="p-6 flex-shrink-0">
-              <div class="flex justify-between items-start mb-4">
+            <div class="p-6 shrink-0 text-center">
+              <div class="mb-4">
                 <h3 class="text-xl font-bold text-gray-900">{{ work.title }}</h3>
               </div>
               <p class="text-gray-600 mb-4">{{ work.description }}</p>
@@ -134,14 +134,7 @@ export default {
           category: 'Nettoyage et entretien',
           showBefore: false
         },
-        {
-          title: 'Reproduction de clés et de badges',
-          description: ' Service minute',
-          beforeImage: '/img/Reproduction_resized.jpg',
-          afterImage: '/img/Reproduction_resized.jpg',
-          category: 'Reproduction de clés',
-          showBefore: false
-        },
+        
         {
           title: 'Reproduction de clés vélo SETRAM',
           description: ' Service minute',
@@ -151,7 +144,7 @@ export default {
           showBefore: false
         },
         {
-          title: 'Reproduction de clés',
+          title: 'Reproduction de clés et badges',
           description: ' Service minute',
           beforeImage: '/img/Toutes clés.jpg',
           afterImage: '/img/Toutes clés.jpg',
