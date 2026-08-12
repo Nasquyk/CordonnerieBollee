@@ -12,12 +12,12 @@
         </section>
 
         <div class="text-sm text-gray-500 pt-6">
-          Dernière mise à jour : 23/06/2026
+          Dernière mise à jour : 12/08/2026
         </div>
       </main>
 
       <footer class="mt-8 text-center text-gray-600">
-        <p>ROSE Vincent</p>
+        
         <p class="text-sm mt-2">Cordonnerie Bollée - 59 Bis Avenue Bollée – 72 000 LE MANS</p>
       </footer>
     </div>
