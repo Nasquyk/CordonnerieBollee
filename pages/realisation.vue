@@ -104,7 +104,7 @@ export default {
         },
         {
           title: 'Chaussures de ville',
-          description: 'Restauration complète d’une paire de chaussures de ville',
+          description: 'Restauration complète d’une paire de chaussure de ville',
           beforeImage: '/img/Real 1-Avant.jpg',
           afterImage: '/img/Real 1-Apres.jpg',
           category: 'Réparation de chaussures',
@@ -112,7 +112,7 @@ export default {
         },
         {
           title: 'Chaussure de ville',
-          description: 'Restauration complète d’une paire de chaussure',
+          description: 'Restauration complète d’une paire de chaussure de ville',
           beforeImage: '/img/Real 2-Avant.jpg',
           afterImage: '/img/Real 2-Apres.jpg',
           category: 'Réparation de chaussures',
