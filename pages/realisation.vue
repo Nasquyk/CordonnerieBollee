@@ -111,7 +111,7 @@ export default {
           showBefore: false
         },
         {
-          title: 'Chaussure',
+          title: 'Chaussure de ville',
           description: 'Restauration complète d’une paire de chaussure',
           beforeImage: '/img/Real 2-Avant.jpg',
           afterImage: '/img/Real 2-Apres.jpg',

@@ -34,7 +34,7 @@ export default {
           title: "1. Éditeur du site",
           content: `
             <p>Le site https://cordonneriebollee.fr/ est édité par :</p>
-            <p><strong>Le Cordonnier Moderne</strong></p>
+            <p><strong>EI Vincent ROSE (Cordonnerie Bollée)</strong></p>
             <p>Vincent ROSE</p>
             <p>Micro-entreprise immatriculée au RM de Le Mans sous le n° 947 554 226</p>
             <p>Siège social : 59 Bis Avenue Bollée - 72 000 LE MANS</p>
