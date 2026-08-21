@@ -35,7 +35,7 @@ export default {
           content: `
             <p>Le site https://cordonneriebollee.fr/ est édité par :</p>
             <p><strong>EI Vincent ROSE (Cordonnerie Bollée)</strong></p>
-            <p>Vincent ROSE</p>
+
             <p>Micro-entreprise immatriculée au RM de Le Mans sous le n° 947 554 226</p>
             <p>Siège social : 59 Bis Avenue Bollée - 72 000 LE MANS</p>
             <p>Téléphone : 06.08.63.83.32</p>
