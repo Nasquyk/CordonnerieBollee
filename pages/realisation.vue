@@ -104,7 +104,7 @@ export default {
         },
         {
           title: 'Chaussures de ville',
-          description: 'Restauration complète d’une paire de chaussure de ville',
+          description: 'Restauration complète d’une paire de chaussures de ville',
           beforeImage: '/img/Real 1-Avant.jpg',
           afterImage: '/img/Real 1-Apres.jpg',
           category: 'Réparation de chaussures',
@@ -112,7 +112,7 @@ export default {
         },
         {
           title: 'Chaussures de ville',
-          description: 'Restauration complète d’une paire de chaussure de ville',
+          description: 'Restauration complète d’une paire de chaussures de ville',
           beforeImage: '/img/Real 2-Avant.jpg',
           afterImage: '/img/Real 2-Apres.jpg',
           category: 'Réparation de chaussures',
@@ -136,7 +136,7 @@ export default {
         },
         
         {
-          title: 'Reproduction de clés vélo SETRAM',
+          title: 'Reproduction de clé vélo SETRAM',
           description: ' Service minute',
           beforeImage: '/img/Clé vélo SETRAM.jpg',
           afterImage: '/img/Clé vélo SETRAM.jpg',

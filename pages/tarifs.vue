@@ -97,12 +97,12 @@ const tarifs = ref({
     { name: "Pièce invisible ", price: "17,5€" }
   ],
   "Clés et badges minute": [
-    { name: "Clé plate", price: "7.5€" },
-    { name: "Clé plate couleur ", price: "8.5€" },
+    { name: "Clé plate", price: "7,5€" },
     { name: "Clé à points", price: "29€" },
     { name: "Clé à gorge", price: "19€" },
     { name: "Clé brevetée", price: " sur devis" },
-    { name: "Badge", price: "à partir de 29€" }
+    { name: "Badge", price: "à partir de 29€" },
+    
   ],
 });
 
